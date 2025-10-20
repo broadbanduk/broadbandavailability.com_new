@@ -16,51 +16,40 @@ export default function SolutionConnection() {
   >("copper");
 
   const renderImage = () => {
-    switch (activeTab) {
-      case "copper":
-        return (
-          <Image
-            src={copperFrame}
-            height={305}
-            className="max-w-xl"
-            alt="Copper connection diagram"
-          />
-        );
-      case "part-fibre":
-        return (
-          <Image
-            src={partFibreFrame}
-            height={305}
-            className="max-w-xl"
-            alt="Part-fibre connection diagram"
-          />
-        );
-      case "full-fibre":
-        return (
-          <Image
-            src={fullFibreFrame}
-            height={305}
-            className="max-w-xl"
-            alt="Full-fibre connection diagram"
-          />
-        );
-      default:
-        return null;
-    }
+    const imageSrc =
+      activeTab === "copper"
+        ? copperFrame
+        : activeTab === "part-fibre"
+          ? partFibreFrame
+          : fullFibreFrame;
+
+    return (
+      <div className="relative w-full max-w-[600px] mx-auto h-52 sm:h-64 md:h-80 lg:h-[350px]">
+        <Image
+          src={imageSrc}
+          alt={`${activeTab} connection diagram`}
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+          priority
+        />
+      </div>
+    );
   };
 
   return (
-    <div className="container bg-white flex items-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-10">
-      <div className="max-w-md space-y-3">
-        <p className="mb-6 text-4xl uppercase text-corporate-black font-bold">
+    <div className="container appearBlock bg-white flex flex-col lg:flex-row items-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
+      {/* Left content */}
+      <div className="max-w-md space-y-3 text-center lg:text-left">
+        <p className="mb-6 text-3xl md:text-4xl uppercase text-corporate-black font-bold">
           3. Connection technology
         </p>
-        <p className="text-xl text-corporate-black">
+        <p className="text-lg md:text-xl text-corporate-black">
           ADSL, FTTC, FTTP — these acronyms confuse most clients. We remove the
           guesswork.
         </p>
         <Link
-          className="flex items-center justify-start gap-2 text-xl text-corporate-blue"
+          className="flex items-center justify-center lg:justify-start gap-2 text-xl text-corporate-blue"
           href="#"
         >
           Read more{" "}
@@ -73,10 +62,12 @@ export default function SolutionConnection() {
         </Link>
       </div>
 
-      <div>
+      {/* Right content */}
+      <div className="w-full lg:w-1/2">
+        {/* Tabs */}
         <div className="flex mb-4 bg-light-gray-bg rounded-[28px] w-fit mx-auto items-center justify-center">
           <button
-            className={`rounded-[28px] px-4 cursor-pointer py-2 text-corporate-black transition-all duration-300 ${
+            className={`rounded-[28px] px-4 py-2 cursor-pointer text-corporate-black transition-all duration-300 ${
               activeTab === "copper"
                 ? "bg-corporate-blue text-white"
                 : "bg-transparent text-corporate-black"
@@ -86,7 +77,7 @@ export default function SolutionConnection() {
             Copper
           </button>
           <button
-            className={`rounded-[28px] px-4 cursor-pointer py-2 text-corporate-black transition-all duration-300 ${
+            className={`rounded-[28px] px-4 py-2 cursor-pointer text-corporate-black transition-all duration-300 ${
               activeTab === "part-fibre"
                 ? "bg-corporate-blue text-white"
                 : "bg-transparent text-corporate-black"
@@ -96,7 +87,7 @@ export default function SolutionConnection() {
             Part-Fibre
           </button>
           <button
-            className={`rounded-[28px] px-4 cursor-pointer py-2 text-corporate-black transition-all duration-300 ${
+            className={`rounded-[28px] px-4 py-2 cursor-pointer text-corporate-black transition-all duration-300 ${
               activeTab === "full-fibre"
                 ? "bg-corporate-blue text-white"
                 : "bg-transparent text-corporate-black"
@@ -107,6 +98,7 @@ export default function SolutionConnection() {
           </button>
         </div>
 
+        {/* Responsive image */}
         <div className="flex items-center justify-center">{renderImage()}</div>
       </div>
     </div>

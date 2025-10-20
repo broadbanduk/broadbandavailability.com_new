@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="bg-light-gray-bg py-[120px]">
-      <div className="grid grid-cols-2 container gap-16 items-center mx-auto">
-        <div className="space-y-11">
-          <h1 className="text-6xl tracking-wide font-bold text-corporate-black uppercase">
+    <div className="bg-light-gray-bg py-4 px-3 lg:px-0 lg:py-[120px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 container gap-16 items-center mx-auto">
+        <div className="space-y-5 lg:space-y-11">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-wide font-bold text-corporate-black uppercase">
             Empower Estate <br /> Agency Listings
           </h1>
           <div className="space-y-4">

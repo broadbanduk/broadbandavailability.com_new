@@ -10,7 +10,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="px-6 md:px-12 flex items-center justify-between sticky top-0 z-50 bg-white shadow-sm">
+    <header className="px-3 md:px-12 gap-4 flex items-center justify-between sticky top-0 z-50 bg-white">
       {/* Left side: Logo + Desktop nav */}
       <div className="flex items-center justify-start gap-8">
         <Link href="/">

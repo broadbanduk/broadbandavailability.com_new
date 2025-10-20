@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-corporate-black p-[120px]">
-      <div className="flex items-start justify-between">
+    <footer className="bg-corporate-black py-4 px-3 lg:p-[120px]">
+      <div className="flex flex-col lg:flex-row gap-5 items-start justify-between">
         <div className="space-y-6">
           <Image src={footerLogo} alt="footerLogo" width={353} height={20} />
           <p className="text-base text-white">© 2010 — 2020</p>
@@ -19,7 +19,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-16">
+        <div className="grid grid-cols-3 gap-8 lg:gap-16">
           <div className="space-y-5">
             <p className="text-base text-white font-bold">Products</p>
             <div className="flex flex-col items-start gap-2.5">

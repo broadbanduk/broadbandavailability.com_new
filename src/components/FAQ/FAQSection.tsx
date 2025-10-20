@@ -40,8 +40,8 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="bg-light-gray-bg px-[72px] py-[120px] space-y-20">
-      <h3 className="text-5xl uppercase text-center tracking-wide text-corporate-black font-bold">
+    <div className="bg-light-gray-bg px-3 lg:px-[72px] py-4 lg:py-[120px] space-y-10 lg:space-y-20">
+      <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase text-center tracking-wide text-corporate-black font-bold">
         Frequently Asked Questions
       </h3>
       <div className="faq-tabs-answers max-w-3xl mx-auto">
