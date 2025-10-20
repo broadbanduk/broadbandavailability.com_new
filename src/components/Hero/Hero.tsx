@@ -1,0 +1,41 @@
+import { heroImage } from "@/static/images";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Hero() {
+  return (
+    <div className="bg-light-gray-bg py-[120px]">
+      <div className="grid grid-cols-2 container gap-16 items-center mx-auto">
+        <div className="space-y-11">
+          <h1 className="text-6xl tracking-wide font-bold text-corporate-black uppercase">
+            Empower Estate <br /> Agency Listings
+          </h1>
+          <div className="space-y-4">
+            <p className="text-xl text-corporate-black">
+              A simple way to build client trust and showcase professionalism.
+            </p>
+            <p className="text-xl text-corporate-black">
+              The free service for estate agencies that automatically displays
+              real internet speeds, provider availability and connection
+              technology for every address across the UK.
+            </p>
+          </div>
+          <Link href="#contact">
+            <button className="py-2.5 px-8 cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80">
+              Get Demo
+            </button>
+          </Link>
+        </div>
+        <div className="">
+          <Image
+            src={heroImage}
+            alt="Hero Image"
+            className="w-full"
+            width={500}
+            height={280}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
