@@ -1,11 +1,4 @@
-import {
-  chartBar,
-  coin,
-  globe,
-  house,
-  shieldCheck,
-  warning,
-} from "@/static/images";
+import { chartBar, shieldCheck, warning } from "@/static/images";
 import Image from "next/image";
 
 export default function MainBenefit() {

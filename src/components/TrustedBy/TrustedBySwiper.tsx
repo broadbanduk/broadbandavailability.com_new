@@ -45,7 +45,7 @@ export default function TrustedBySwiper() {
                 {slide.company}
               </p>
               <p className="mt-5 lg:mt-10 text-sm lg:text-xl text-corporate-black">
-                "{slide.text}"
+                &quot;{slide.text}&quot;
               </p>
             </div>
           </div>
