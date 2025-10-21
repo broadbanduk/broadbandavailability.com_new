@@ -14,7 +14,7 @@ export default function Solution() {
         When a client browses your property listings, they shouldn’t have to
         leave your site to find out about broadband.
       </p>
-      <div className="space-y-16">
+      <div className="space-y-16 mb-10 lg:mb-20">
         <div className="container appearBlock bg-white flex flex-col lg:flex-row items-center justify-between gap-5 mx-auto rounded-[28px] py-4 lg:py-8 px-5 lg:px-10">
           <div className="max-w-md space-y-3">
             <p className="mb-6 text-4xl uppercase text-corporate-black font-bold">

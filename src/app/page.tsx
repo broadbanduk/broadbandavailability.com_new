@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <HeroTicker />
       <div className="corporate-radial py-4 px-3 lg:py-20 lg:px-0 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-28">
-        <p className="font-bold text-2xl text-corporate-black">Introdusing</p>
+        <p className="font-bold text-2xl text-corporate-black">Introducing</p>
         <div className="space-y-8 max-w-3xl">
           <p className="font-bold text-xl text-corporate-black">
             True Broadband Availability Service
