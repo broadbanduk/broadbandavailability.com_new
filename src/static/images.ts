@@ -31,9 +31,11 @@ import img_providers_list from "../../asset/img_providers_list.png";
 import copperFrame from "../../asset/copper-frame.png";
 import partFibreFrame from "../../asset/part-fibre-frame.png";
 import fullFibreFrame from "../../asset/full-fibre-frame.png";
+import lessThan from "../../asset/LessThan.svg";
 
 export {
   logo,
+  lessThan,
   footerLogo,
   chevronRight,
   abacusEstates,

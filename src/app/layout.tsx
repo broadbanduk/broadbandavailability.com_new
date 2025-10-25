@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import ContactDialog from "@/components/Dialog/ContactDialog";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ContactDialog />
       </body>
     </html>
   );

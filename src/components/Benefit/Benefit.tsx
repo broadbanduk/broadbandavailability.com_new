@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Benefit() {
   return (
     <section className="py-4 lg:py-24 space-y-10 lg:space-y-20">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl uppercase text-center tracking-wide text-corporate-black font-bold">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national uppercase text-center tracking-wide text-corporate-black font-bold">
         Why does it matter?
       </h2>
       <div className="container mx-auto gap-10 md:gap-20 items-start grid grid-cols-1 lg:grid-cols-3">

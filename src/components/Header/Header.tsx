@@ -1,16 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { logo } from "@/static/images";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // burger & close icon
+import { Menu, X } from "lucide-react";
+import GetDemo from "../CTA/GetDemo";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!headerRef.current) return;
+
+      const totalHeight = headerRef.current.clientHeight + 250;
+      setScrolled(window.scrollY >= totalHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="px-3 md:px-12 gap-4 flex items-center justify-between sticky top-0 z-50 bg-white">
+    <header
+      id="header"
+      ref={headerRef}
+      className={`px-3 md:px-12 gap-4 flex items-center justify-between sticky top-0 z-50 bg-white ${
+        scrolled ? "scrolled" : ""
+      }`}
+    >
       {/* Left side: Logo + Desktop nav */}
       <div className="flex items-center justify-start gap-8">
         <Link href="/">
@@ -57,13 +78,14 @@ export default function Header() {
       </div>
 
       {/* Right side: Auth buttons */}
-      <div className="hidden md:flex py-4 items-center justify-end gap-4">
-        <button className="py-2.5 px-4 cursor-pointer rounded-full text-corporate-black transition-all duration-300 ease-in-out border border-transparent hover:border-corporate-blue">
+      <div className="hidden md:flex py-4 [.scrolled_&]:py-3 transition-all duration-300 items-center justify-end gap-4">
+        {/*<button className="py-2.5 px-4 cursor-pointer rounded-full text-corporate-black transition-all duration-300 ease-in-out border border-transparent hover:border-corporate-blue">
           Log in
         </button>
         <button className="py-2.5 px-4 cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80">
           Sign Up
-        </button>
+        </button>*/}
+        <GetDemo />
       </div>
 
       {/* Burger menu button (mobile only) */}
@@ -108,14 +130,15 @@ export default function Header() {
               FAQ
             </Link>
 
-            <div className="flex flex-col gap-3 mt-4">
+            <GetDemo />
+            {/*<div className="flex flex-col gap-3 mt-4">
               <button className="w-full py-2.5 rounded-full text-corporate-black border border-transparent hover:border-corporate-blue">
                 Log in
               </button>
               <button className="w-full py-2.5 rounded-full bg-corporate-blue text-white hover:opacity-80">
                 Sign Up
               </button>
-            </div>
+            </div>*/}
           </nav>
         </div>
       )}

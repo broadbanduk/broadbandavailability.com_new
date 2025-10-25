@@ -1,13 +1,13 @@
 import { heroImage } from "@/static/images";
 import Image from "next/image";
-import Link from "next/link";
+import GetDemo from "../CTA/GetDemo";
 
 export default function Hero() {
   return (
     <div className="bg-light-gray-bg py-4 px-3 lg:px-0 lg:py-[120px]">
       <div className="grid grid-cols-1 lg:grid-cols-2 container gap-16 items-center mx-auto">
         <div className="space-y-5 lg:space-y-11">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-wide font-bold text-corporate-black uppercase">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national tracking-wide font-bold text-corporate-black uppercase">
             Empower Estate <br /> Agency Listings
           </h1>
           <div className="space-y-4">
@@ -20,11 +20,7 @@ export default function Hero() {
               technology for every address across the UK.
             </p>
           </div>
-          <Link href="#contact">
-            <button className="py-2.5 px-8 cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80">
-              Get Demo
-            </button>
-          </Link>
+          <GetDemo />
         </div>
         <div className="">
           <Image
