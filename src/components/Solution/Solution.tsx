@@ -6,7 +6,10 @@ import ReadMore from "./ReadMore";
 
 export default function Solution() {
   return (
-    <div className="bg-light-gray-bg py-4 lg:py-24 px-3 lg:px-20">
+    <section
+      id="software-company"
+      className="bg-light-gray-bg py-4 lg:py-24 px-3 lg:px-20"
+    >
       <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national mb-10 uppercase text-center tracking-wide text-corporate-black font-bold">
         Solution
       </h3>
@@ -49,6 +52,6 @@ export default function Solution() {
         instantly, and move closer to a decision — while your agency looks
         smarter, faster and one step ahead.
       </p>
-    </div>
+    </section>
   );
 }

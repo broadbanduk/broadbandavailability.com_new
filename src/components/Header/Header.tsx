@@ -68,7 +68,7 @@ export default function Header() {
             <li>
               <Link
                 className="py-2.5 text-corporate-black hover:text-corporate-blue transition"
-                href="#FAQ"
+                href="#faq"
               >
                 FAQ
               </Link>
@@ -123,7 +123,7 @@ export default function Header() {
               Integration
             </Link>
             <Link
-              href="#FAQ"
+              href="#faq"
               onClick={() => setIsOpen(false)}
               className="py-2 text-corporate-black hover:text-corporate-blue transition"
             >
