@@ -42,7 +42,7 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="bg-light-gray-bg px-3 lg:px-[72px] py-4 lg:py-[120px] space-y-10 lg:space-y-20"
+      className="bg-light-gray-bg px-3 sm:px-6 md:px-12 lg:px-16 xl:px-[72px] py-4 sm:py-8 md:py-12 lg:py-16 xl:py-[120px] space-y-10 lg:space-y-20"
     >
       <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national uppercase text-center tracking-wide text-corporate-black font-bold">
         Frequently Asked Questions

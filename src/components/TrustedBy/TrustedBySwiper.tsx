@@ -36,7 +36,7 @@ export default function TrustedBySwiper() {
     >
       {slidesData.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="trusted-by-slide py-4 lg:py-8 px-7 lg:px-14 rounded-[28px] max-w-2xl">
+          <div className="trusted-by-slide py-4 lg:py-8 px-7 lg:px-14 rounded-[28px] max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl">
             <div className="trusted-by-slide__content">
               <h3 className="text-corporate-black font-bold text-xl">
                 {slide.name}

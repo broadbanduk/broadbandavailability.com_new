@@ -11,6 +11,7 @@
     --breakpoint-xl: 992px;
     --breakpoint-2xl: 1180px;
     --font-national: "National 2 Condensed", sans-serif;
+    --font-lato: "Lato", sans-serif;
 }
 
 img {
@@ -166,6 +167,14 @@ html {
     align-items: center;
     transition: 0.3s ease;
     gap: 12px;
+}
+
+.faq-question {
+    font-family: var(--font-lato);
+    color: var(--color-corporate-black);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .accordion-content {

@@ -14,13 +14,15 @@ export default function Home() {
     <>
       <Hero />
       <HeroTicker />
-      <div className="corporate-radial py-4 px-3 lg:py-20 lg:px-0 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-28">
-        <p className="font-bold text-2xl text-corporate-black">Introducing</p>
+      <div className="corporate-radial px-3 py-4 sm:py-8 md:py-12 lg:py-16 xl:py-20 xl:px-0 flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-12 md:gap-16 xl:gap-28">
+        <p className="font-bold font-lato text-2xl text-corporate-black">
+          Introducing
+        </p>
         <div className="space-y-8 max-w-3xl">
-          <p className="font-bold text-xl text-corporate-black">
+          <p className="text-center lg:text-left font-bold font-lato text-xl text-corporate-black">
             True Broadband Availability Service
           </p>
-          <p className="text-xl text-corporate-black">
+          <p className="text-sm md:text-base lg:text-lg xl:text-xl text-corporate-black">
             Our game-changing true broadband availability service marks a new
             era for estate agencies that give a simple, instant way to display
             real internet speeds, provider options, and connection technology

@@ -11,8 +11,8 @@ export default function SolutionProviders() {
   );
 
   return (
-    <div className="container appearBlock bg-white flex flex-col lg:flex-row items-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
-      <div className="w-full lg:w-1/2">
+    <div className="container appearBlock bg-white flex flex-col-reverse lg:grid grid-cols-2 items-start lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
+      <div className="w-full">
         {/* Tabs */}
         <div className="flex mb-4 p-1.5 bg-light-gray-bg rounded-[28px] w-fit mx-auto items-center justify-center">
           <button
@@ -38,7 +38,7 @@ export default function SolutionProviders() {
         </div>
 
         {/* Description text */}
-        <p className="text-base mb-4 text-corporate-black text-center">
+        <p className="text-xs sm:text-sm md:text-md last:text-base mb-4 text-corporate-black text-center">
           {activeTab === "providers"
             ? "This property has access to the following providers:"
             : "This property has access to the following speeds:"}
@@ -48,13 +48,11 @@ export default function SolutionProviders() {
         <div
           className={`flex items-center justify-between ${activeTab === "speeds" ? "flex-row-reverse" : ""} gap-5`}
         >
-          <div className="relative w-full max-w-[500px] mx-auto h-52 sm:h-64 md:h-72 lg:h-80">
+          <div className="relative w-full max-w-[500px] mx-auto max-h-52 sm:max-h-64 md:max-h-72 lg:max-h-80">
             <Image
               src={activeTab === "providers" ? providers : img_providers_list}
               alt="internet speed"
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
+              className="w-full"
               priority
             />
           </div>
@@ -76,8 +74,8 @@ export default function SolutionProviders() {
       </div>
 
       {/* Right content */}
-      <div className="max-w-md space-y-3 text-center lg:text-left">
-        <p className="mb-6 text-3xl md:text-4xl font-national uppercase text-corporate-black font-bold">
+      <div className="max-w-md space-y-3 px-5 text-left order-1">
+        <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-lato text-corporate-black font-bold">
           2. Available providers
         </p>
         <ReadMore text="Clients often waste time searching multiple websites to see which ISPs are available. Now they don’t have to. All providers are shown in one place, directly on your listing and saving time, removing uncertainty and giving you the credibility of being fully transparent." />

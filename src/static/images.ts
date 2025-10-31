@@ -28,9 +28,9 @@ import virginMedia from "../../asset/virgin+media_d_480_300.png";
 import vodafone from "../../asset/vodafone_d_480_300.png";
 import warning from "../../asset/warning.svg";
 import img_providers_list from "../../asset/img_providers_list.png";
-import copperFrame from "../../asset/copper-frame.png";
-import partFibreFrame from "../../asset/part-fibre-frame.png";
-import fullFibreFrame from "../../asset/full-fibre-frame.png";
+import copperFrame from "../../asset/copper.svg";
+import partFibreFrame from "../../asset/part-fibre.svg";
+import fullFibreFrame from "../../asset/full-fibre.svg";
 import lessThan from "../../asset/LessThan.svg";
 
 export {

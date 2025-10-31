@@ -1,8 +1,9 @@
 import Link from "next/link";
+import GetDemo from "./GetDemo";
 
 export default function FinalCTA() {
   return (
-    <section className="container mx-auto space-y-10 lg:space-y-20 py-4 lg:py-24">
+    <section className="container mx-auto space-y-6 px-3 sm:space-y-8 md:space-y-10 lg:space-y-20 py-4 sm:py-8 md:py-12 lg:py-16 xl:py-[120px]">
       <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national uppercase text-center tracking-wide text-corporate-black font-bold">
         Get started today — stay compliant, build trust and accelerate sales.
       </h3>
@@ -12,11 +13,7 @@ export default function FinalCTA() {
           and give your clients reliable internet information for every
           property.
         </p>
-        <Link href="#contact">
-          <button className="py-2.5 mb-6 px-12 cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80">
-            Get Demo
-          </button>
-        </Link>
+        <GetDemo />
         <p className="text-corporate-black opacity-60 text-base">
           No credit card required
         </p>

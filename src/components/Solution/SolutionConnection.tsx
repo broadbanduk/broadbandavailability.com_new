@@ -30,13 +30,14 @@ export default function SolutionConnection() {
           : fullFibreFrame;
 
     return (
-      <div className="relative w-full max-w-[600px] mx-auto h-52 sm:h-64 md:h-80 lg:h-[350px]">
+      <div className="relative mx-auto w-full min-h-[150px] sm:min-h-[175px] md:min-h-[200px] lg:min-h-[250px] xl:min-h-[300px] max-w-[570px] aspect-[16/9] overflow-hidden">
         <Image
+          key={activeTab}
           src={imageSrc}
           alt={`${activeTab} connection diagram`}
           fill
-          className="object-contain"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+          className="object-contain transition-opacity duration-300"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 570px"
           priority
         />
       </div>
@@ -55,17 +56,17 @@ export default function SolutionConnection() {
   };
 
   return (
-    <div className="container appearBlock bg-white flex flex-col lg:flex-row items-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
+    <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
       {/* Left content */}
-      <div className="max-w-md space-y-3 text-center lg:text-left">
-        <p className="mb-6 text-3xl md:text-4xl font-national uppercase text-corporate-black font-bold">
+      <div className="max-w-md space-y-3 px-5 text-left">
+        <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-lato text-corporate-black font-bold">
           3. Connection technology
         </p>
         <ReadMore text="ADSL, FTTC, FTTP — these acronyms confuse most clients. We remove the guesswork. The tool shows the real connection type available at the property, making it simple to understand whether the home has basic broadband or full fibre." />
       </div>
 
       {/* Right content */}
-      <div className="w-full lg:w-1/2">
+      <div className="w-full">
         {/* Tabs */}
         <div className="flex p-1.5 mb-4 bg-light-gray-bg rounded-[28px] w-fit mx-auto items-center justify-center">
           {tabs.map((tab) => (
