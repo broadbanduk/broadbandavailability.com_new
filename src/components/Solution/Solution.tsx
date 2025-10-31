@@ -34,7 +34,7 @@ export default function Solution() {
             <Image
               src={speeds}
               alt="internet speed"
-              className="w-full"
+              className="w-full object-contain"
               priority
             />
           </div>
