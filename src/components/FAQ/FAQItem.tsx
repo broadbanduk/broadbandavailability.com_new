@@ -1,6 +1,6 @@
 "use client";
 
-import { chevronRight } from "@/static/images";
+import { chevronRight, plus } from "@/static/images";
 import type { FAQItemType } from "@/types";
 import { slideDown, slideUp } from "@/utils";
 import Image from "next/image";
@@ -20,15 +20,12 @@ export default function FAQItem({
   onClick,
 }: FAQItemProps) {
   const contentRef = useRef(null);
-  const questionRef = useRef(null);
 
   useEffect(() => {
     if (isOpen) {
       slideDown(contentRef.current);
-      slideUp(questionRef.current);
     } else {
       slideUp(contentRef.current);
-      slideDown(questionRef.current);
     }
   }, [isOpen]);
   return (
@@ -36,17 +33,13 @@ export default function FAQItem({
       className={`faq-answer-item ${isOpen ? "active" : ""}`}
       onClick={() => onClick(index)}
     >
-      <div ref={questionRef} className={`faq-answer-header`}>
+      <div className={`faq-answer-header`}>
         <p className="faq-question">{item.question}</p>
-        <button type="button" className="faq-icon">
-          <Image
-            width={0}
-            height={0}
-            sizes="100vw"
-            loading="lazy"
-            src={chevronRight}
-            alt="chevron"
-          />
+        <button
+          type="button"
+          className="faq-icon bg-corporate-black/30 rounded-full p-1"
+        >
+          <Image width={18} height={18} src={plus} alt="chevron" />
         </button>
       </div>
       <div ref={contentRef} className="faq-answer-content">

@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function ISPTicker() {
   return (
-    <div className="ticker-wrap isp-ticker">
+    <div className="ticker-wrap isp-ticker container mx-auto">
       <div className="ticker">
         <div className="ticker__item">
           <Image width={188} height={40} src={dreweryHomes} alt="bt_icon" />

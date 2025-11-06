@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function HeroTicker() {
   return (
-    <div className="ticker-wrap">
+    <div className="ticker-wrap container mx-auto">
       <div className="ticker">
         <div className="ticker__item">
           <Image width={40} height={40} src={bt_icon} alt="bt_icon" />

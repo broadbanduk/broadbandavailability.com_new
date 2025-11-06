@@ -1,4 +1,4 @@
-import { footerLogo } from "@/static/images";
+import { footerLogo, linkedin } from "@/static/images";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,9 +8,17 @@ export default function Footer() {
       <div className="flex flex-col lg:flex-row gap-5 items-start justify-between">
         <div>
           <Image src={footerLogo} alt="footerLogo" width={353} height={20} />
-          <p className="text-white text-xl pl-12">Connectivity Matters.</p>
+          <p className="text-white text-xl pl-11">Connectivity Matters.</p>
+          <div className="flex items-center justify-start pl-10 gap-6">
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/showcase/broadbandavailability/"
+            >
+              <Image src={linkedin} alt="linkedin" width={32} height={32} />
+            </Link>
+          </div>
         </div>
-        <div className="grid grid-cols-3 gap-8 lg:gap-16">
+        <div className="grid grid-cols-[1fr_auto_auto] gap-8 lg:gap-16">
           <div className="space-y-5">
             <p className="text-base text-white font-bold">Products</p>
             <div className="flex flex-col items-start gap-2.5">
@@ -31,9 +39,9 @@ export default function Footer() {
               <Link
                 target="_blank"
                 className="text-base text-white"
-                href="https://www.broadbandspeedtest.org.uk/broadband"
+                href="https://www.broadbandavailability.com/"
               >
-                Broadband Deals
+                Broadband Availability
               </Link>
             </div>
           </div>
@@ -68,12 +76,6 @@ export default function Footer() {
                 href="https://broadbanduk.com/privacy"
               >
                 Privacy
-              </Link>
-              <Link
-                className="text-base text-white"
-                href="https://broadbanduk.com/sitemap"
-              >
-                Sitemap
               </Link>
             </div>
           </div>

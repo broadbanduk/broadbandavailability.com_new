@@ -5,27 +5,27 @@ const benefits = [
   {
     icon: shieldCheck,
     alt: "shieldCheck",
-    title: "Mandatory Broadband Disclosure",
+    title: "Accurate Property Data",
     description:
-      "Ensure your agency complies with DMCC and CMA rules. All listings must show accurate broadband information.",
+      "Display real broadband speeds, availability and technology on every listing are essential for informed client decisions.",
     width: 42,
     height: 44,
   },
   {
     icon: chartBar,
     alt: "chartBar",
-    title: "Accurate Property Data",
+    title: "Compliance build in",
     description:
-      "Display real broadband speeds, availability, and technology on every listing — essential for informed client decisions.",
+      "Meet the 6 April 2025 requirements to avoid fines up to £300,000 or 10% of global turnover.",
     width: 50,
     height: 44,
   },
   {
     icon: warning,
     alt: "warning",
-    title: "Regulatory Compliance",
+    title: "Avoid Fines",
     description:
-      "Meet the 6 April 2025 requirements to avoid fines up to £300,000 or 10% of global turnover.",
+      "Ensure your agency complies with DMCC and CMA rules. All listings must show accurate broadband information.",
     width: 44,
     height: 44,
   },

@@ -13,8 +13,8 @@ export default function FinalCTA() {
           and give your clients reliable internet information for every
           property.
         </p>
-        <GetDemo />
-        <p className="text-corporate-black opacity-60 text-base">
+        <GetDemo text="Book Demo" />
+        <p className="text-corporate-black text-xs opacity-60">
           No credit card required
         </p>
       </div>

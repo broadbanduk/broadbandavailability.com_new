@@ -6,29 +6,40 @@ import { useState } from "react";
 
 const items: FAQItemType[] = [
   {
-    question: "How difficult is it to integrate the service?",
+    question: "⁠What is the Broadband Availability service?",
     answer:
-      "Yes. The service is fully compliant with CMA guidance and the DMCC Act.",
+      "Broadband Availability provides accurate, address-level broadband data for property listings. It shows the real speeds, available ISPs, and connection types (such as full fibre or FTTC) for each individual property, replacing unreliable postcode-level estimates.",
   },
   {
-    question: "Does it comply with the new legal requirements?",
+    question: "Who is the service for?",
     answer:
-      "Yes. The service is fully compliant with CMA guidance and the DMCC Act.",
+      "The service is designed for anyone in the property sector who needs accurate broadband information at the address level. This includes estate agents, proptech platforms, developers, and other property professionals who want to provide buyers and renters with reliable data on speeds, connection types, and available ISPs.",
   },
   {
-    question: "Which providers are covered?",
+    question: "Where is the data sourced from?",
     answer:
-      "Yes. The service is fully compliant with CMA guidance and the DMCC Act.",
+      "We source our broadband data directly from Openreach’s engineering database, which covers around 30 million residential properties, and from regular feeds from major ISPs and alternative networks. This combination gives a complete and current view of UK broadband coverage.",
   },
   {
-    question: "Which providers are covered?",
+    question:
+      "How is this different from other broadband checkers or Ofcom data?",
     answer:
-      "Yes. The service is fully compliant with CMA guidance and the DMCC Act.",
+      "Unlike Ofcom’s postcode-based checker, we use live data directly from Openreach, other major networks, and ISPs to deliver precise, property-specific information. Our data updates far more frequently, ensuring buyers and renters see the most accurate picture of connectivity available.",
   },
   {
-    question: "How often is the data updated?",
+    question: "How do I add the widget to my website?",
     answer:
-      "Yes. The service is fully compliant with CMA guidance and the DMCC Act.",
+      "The widget is free and simple to install with a short code snippet. You can drop it into your existing website or listings platform in minutes. No technical expertise required. It automatically matches your website layout and updates data in real time.",
+  },
+  {
+    question: "Is the widget really free?",
+    answer:
+      "Yes. The basic widget is completely free to use for estate agents and property professionals. We also offer a paid API for businesses and proptech platforms that want to integrate broadband data directly into their systems or reports.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Simply click the button “Book Demo” for free access and we’ll send you your unique code snippet. You can install the widget immediately and start showing accurate broadband data on your listings within minutes.",
   },
 ];
 
@@ -44,20 +55,22 @@ export default function FAQSection() {
       id="faq"
       className="bg-light-gray-bg px-3 sm:px-6 md:px-12 lg:px-16 xl:px-[72px] py-4 sm:py-8 md:py-12 lg:py-16 xl:py-[120px] space-y-10 lg:space-y-20"
     >
-      <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national uppercase text-center tracking-wide text-corporate-black font-bold">
-        Frequently Asked Questions
-      </h3>
-      <div className="faq-tabs-answers max-w-3xl mx-auto">
-        <div className="faq-answers-container grid grid-cols-1 gap-6">
-          {items.map((item, index) => (
-            <FAQItem
-              isOpen={openIndex === index}
-              onClick={handleClick}
-              index={index}
-              item={item}
-              key={index}
-            />
-          ))}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 container mx-auto">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-lato tracking-wide text-corporate-black font-bold">
+          Frequently Asked Questions
+        </h3>
+        <div className="faq-tabs-answers max-w-3xl mx-auto">
+          <div className="faq-answers-container grid grid-cols-1 gap-6">
+            {items.map((item, index) => (
+              <FAQItem
+                isOpen={openIndex === index}
+                onClick={handleClick}
+                index={index}
+                item={item}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

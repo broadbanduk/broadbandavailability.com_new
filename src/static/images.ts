@@ -16,6 +16,8 @@ import eeLogo from "../../asset/ee_logo.png";
 import globe from "../../asset/globe.svg";
 import heroImage from "../../asset/hero_image.png";
 import house from "../../asset/house.svg";
+import shieldSlash from "../../asset/shield-slash.svg";
+import checkCircle from "../../asset/check-circle.svg";
 import hyperopticLogo from "../../asset/hyperoptic_d_480_300.png";
 import providers from "../../asset/img_providers.png";
 import speeds from "../../asset/img_speeds.png";
@@ -32,9 +34,17 @@ import copperFrame from "../../asset/copper.svg";
 import partFibreFrame from "../../asset/part-fibre.svg";
 import fullFibreFrame from "../../asset/full-fibre.svg";
 import lessThan from "../../asset/LessThan.svg";
+import plus from "../../asset/plus.svg";
+import linkedin from "../../asset/linkedin.svg";
+import brockTaylor from "../../asset/brock-taylor.png";
+import thomasSamuel from "../../asset/thomas-samuel.png";
 
 export {
   logo,
+  plus,
+  brockTaylor,
+  thomasSamuel,
+  linkedin,
   lessThan,
   footerLogo,
   chevronRight,
@@ -57,6 +67,8 @@ export {
   globe,
   heroImage,
   house,
+  shieldSlash,
+  checkCircle,
   hyperopticLogo,
   providers,
   speeds,

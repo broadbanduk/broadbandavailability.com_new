@@ -1,27 +1,27 @@
-import { coin, globe, house } from "@/static/images";
+import { checkCircle, coin, globe, house, shieldSlash } from "@/static/images";
 import BenefitItem from "./BenefitItem";
 
 const benefits = [
   {
     icon: house,
     alt: "house",
-    title: "Remote working is now mainstream",
+    title: "Broadband is the fourth utility",
     description:
-      "Two in five UK workers (40% or 13 million people) now work from home at least part-time, making reliable broadband a top priority for buyers and tenants.",
+      "40% of UK workers now work from home at least part-time, making reliable connectivity essential for modern buyers.",
   },
   {
-    icon: globe,
-    alt: "globe",
-    title: "Broadband drives property decisions",
+    icon: checkCircle,
+    alt: "checkCircle",
+    title: "One integration. Zero effort",
     description:
-      "Fast and reliable internet is now the second most important factor for homebuyers, after location. Properties with good connectivity can command premiums of £3,500 or more.",
+      "Checking broadband manually wastes hours and risks errors. We deliver accurate data seamlessly into your listings.",
   },
   {
-    icon: coin,
-    alt: "coin",
-    title: "Poor connectivity has real costs",
+    icon: shieldSlash,
+    alt: "shieldSlash",
+    title: "Transparency builds trust",
     description:
-      "Weak or unreliable broadband can slash property values by up to 25%, with three-quarters of home workers reporting they couldn’t work due to poor speeds.",
+      "Accurate broadband disclosure is now mandatory as of 6 April 2025. Trust closes deals faster.",
   },
 ];
 

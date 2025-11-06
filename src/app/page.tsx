@@ -1,5 +1,6 @@
 import Benefit from "@/components/Benefit/Benefit";
 import MainBenefit from "@/components/Benefit/MainBenefit";
+import EmailCTA from "@/components/CTA/EmailCTA";
 import FinalCTA from "@/components/CTA/FinalCTA";
 import IntegrationCTA from "@/components/CTA/IntegrationCTA";
 import FAQSection from "@/components/FAQ/FAQSection";
@@ -34,6 +35,7 @@ export default function Home() {
       <Solution />
       <MainBenefit />
       <IntegrationCTA />
+      <EmailCTA />
       <ISPTicker />
       <TrustedBy />
       <FAQSection />

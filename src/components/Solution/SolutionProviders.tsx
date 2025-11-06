@@ -11,7 +11,7 @@ export default function SolutionProviders() {
   );
 
   return (
-    <div className="container appearBlock bg-white flex flex-col-reverse lg:grid grid-cols-2 items-start lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
+    <div className="container appearBlock bg-white flex flex-col-reverse lg:grid grid-cols-2 items-start lg:items-center lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
       <div className="w-full">
         {/* Tabs */}
         <div className="flex mb-4 p-1.5 bg-light-gray-bg rounded-[28px] w-fit mx-auto items-center justify-center">

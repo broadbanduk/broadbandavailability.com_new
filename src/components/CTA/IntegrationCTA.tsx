@@ -16,7 +16,11 @@ export default function IntegrationCTA() {
             and give your clients reliable internet information for every
             property.
           </p>
-          <GetDemo />
+          <p className="mb-11 max-w-2xl text-center text-corporate-black text-xl">
+            Or take it further and plug in with our API for instant, real-time
+            updates.
+          </p>
+          <GetDemo text="Book Demo" />
         </div>
       </div>
     </section>

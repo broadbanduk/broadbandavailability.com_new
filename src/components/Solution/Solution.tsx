@@ -1,8 +1,9 @@
-import { speeds } from "@/static/images";
+import { brockTaylor, speeds, thomasSamuel } from "@/static/images";
 import Image from "next/image";
 import SolutionProviders from "./SolutionProviders";
 import SolutionConnection from "./SolutionConnection";
 import ReadMore from "./ReadMore";
+import Link from "next/link";
 
 export default function Solution() {
   return (
@@ -18,7 +19,7 @@ export default function Solution() {
         leave your site to find out about broadband.
       </p>
       <div className="space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 xl:space-y-16 mb-10 lg:mb-20">
-        <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-4 lg:py-8 px-5 lg:px-10">
+        <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:items-center lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-4 lg:py-8 px-5 lg:px-10">
           <div className="max-w-md px-5 space-y-3">
             <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-lato text-corporate-black font-bold">
               1. Real internet speeds
@@ -45,11 +46,59 @@ export default function Solution() {
       <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national mb-4 md:mb-6 xl:mb-10 uppercase text-center tracking-wide text-corporate-black font-bold">
         The result?
       </h3>
-      <p className="mx-auto container px-3 sm:px-6 md:px-8 lg:px-12 xl:px-24 text-center text-corporate-black text-sm md:text-base lg:text-lg xl:text-xl">
+      <p className="mx-auto container px-3 sm:px-6 md:px-8 lg:px-12 xl:px-24 text-center text-corporate-black text-sm md:text-base lg:text-lg xl:text-xl mb-4 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-24">
         Clients stay on your site longer, get the information they need
-        instantly, and move closer to a decision — while your agency looks
+        instantly, and move closer to a decision, while your agency looks
         smarter, faster and one step ahead.
       </p>
+      <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national mb-4 md:mb-6 xl:mb-10 uppercase text-center tracking-wide text-corporate-black font-bold">
+        How Agents Integrate Broadband Information in Listings
+      </h3>
+      <p className="mx-auto container px-3 sm:px-6 md:px-8 lg:px-12 xl:px-24 text-center text-corporate-black text-sm md:text-base lg:text-lg xl:text-xl mb-4">
+        Turning Broadband Data into Sales Opportunities
+      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 container mx-auto ">
+        <Link
+          className="bg-white rounded-2xl p-2 shadow-lg space-y-4"
+          target="_blank"
+          href="https://www.brocktaylor.co.uk"
+        >
+          <h4 className="block text-corporate-black font-bold font-lato text-lg">
+            Brock Taylor
+          </h4>
+          <Link
+            className="text-corporate-blue text-sm block"
+            href="https://www.brocktaylor.co.uk"
+          >
+            https://www.brocktaylor.co.uk
+          </Link>
+          <Image
+            src={brockTaylor}
+            alt="Brock Taylor"
+            className="mx-auto block !max-w-full object-center object-cover max-h-[300px] rounded-xl"
+          />
+        </Link>
+        <Link
+          className="bg-white rounded-2xl p-2 shadow-lg space-y-4"
+          target="_blank"
+          href="https://www.thomassamuel.co.uk"
+        >
+          <h4 className="block text-corporate-black font-bold font-lato text-lg">
+            Thomas Samuel
+          </h4>
+          <Link
+            className="text-corporate-blue text-sm block"
+            href="https://www.thomassamuel.co.uk"
+          >
+            https://www.thomassamuel.co.uk
+          </Link>
+          <Image
+            src={thomasSamuel}
+            alt="Thomas Samuel"
+            className="mx-auto !max-w-full object-center object-cover max-h-[300px] rounded-xl"
+          />
+        </Link>
+      </div>
     </section>
   );
 }

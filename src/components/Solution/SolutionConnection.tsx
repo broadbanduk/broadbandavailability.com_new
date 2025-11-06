@@ -56,7 +56,7 @@ export default function SolutionConnection() {
   };
 
   return (
-    <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
+    <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:items-center lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
       {/* Left content */}
       <div className="max-w-md space-y-3 px-5 text-left">
         <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-lato text-corporate-black font-bold">

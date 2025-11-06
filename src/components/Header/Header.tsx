@@ -39,6 +39,10 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
+      </div>
+
+      {/* Right side: Auth buttons */}
+      <div className="hidden md:flex py-4 [.scrolled_&]:py-3 transition-all duration-300 items-center justify-end gap-4">
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8">
             <li>
@@ -46,7 +50,7 @@ export default function Header() {
                 className="py-2.5 text-corporate-black hover:text-corporate-blue transition"
                 href="#agents"
               >
-                Agents
+                Estate Agencies
               </Link>
             </li>
             <li>
@@ -54,7 +58,7 @@ export default function Header() {
                 className="py-2.5 text-corporate-black hover:text-corporate-blue transition"
                 href="#software-company"
               >
-                Software company
+                Proptech & Software
               </Link>
             </li>
             <li>
@@ -75,17 +79,13 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-      </div>
-
-      {/* Right side: Auth buttons */}
-      <div className="hidden md:flex py-4 [.scrolled_&]:py-3 transition-all duration-300 items-center justify-end gap-4">
         {/*<button className="py-2.5 px-4 cursor-pointer rounded-full text-corporate-black transition-all duration-300 ease-in-out border border-transparent hover:border-corporate-blue">
           Log in
         </button>
         <button className="py-2.5 px-4 cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80">
           Sign Up
         </button>*/}
-        <GetDemo />
+        <GetDemo text="Sign Up" />
       </div>
 
       {/* Burger menu button (mobile only) */}
@@ -106,14 +106,14 @@ export default function Header() {
               onClick={() => setIsOpen(false)}
               className="py-2 text-corporate-black hover:text-corporate-blue transition"
             >
-              Agents
+              Estate Agencies
             </Link>
             <Link
               href="#software-company"
               onClick={() => setIsOpen(false)}
               className="py-2 text-corporate-black hover:text-corporate-blue transition"
             >
-              Software company
+              Proptech & Software
             </Link>
             <Link
               href="#integration"
@@ -130,7 +130,7 @@ export default function Header() {
               FAQ
             </Link>
 
-            <GetDemo />
+            <GetDemo text="Sign Up" />
             {/*<div className="flex flex-col gap-3 mt-4">
               <button className="w-full py-2.5 rounded-full text-corporate-black border border-transparent hover:border-corporate-blue">
                 Log in
