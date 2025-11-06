@@ -273,7 +273,7 @@ html {
     animation-range: entry;
 }
 
-/*@font-face {
+@font-face {
     font-family: "National 2 Condensed";
     src: url("/broadbandavailability.com_new/fonts/test-national-2-condensed-thin.woff2")
         format("woff2");
@@ -399,9 +399,9 @@ html {
         format("woff2");
     font-weight: 900;
     font-style: italic;
-}*/
+}
 
-@font-face {
+/*@font-face {
     font-family: "National 2 Condensed";
     src: url("/fonts/test-national-2-condensed-thin.woff2") format("woff2");
     font-weight: 100;
@@ -520,7 +520,7 @@ html {
         format("woff2");
     font-weight: 900;
     font-style: italic;
-}
+}*/
 
 .dialog-scrollable::-webkit-scrollbar {
     width: 8px;
