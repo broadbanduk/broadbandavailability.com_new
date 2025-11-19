@@ -28,7 +28,7 @@ export default function Header() {
     <header
       id="header"
       ref={headerRef}
-      className={`px-3 md:px-12 gap-4 flex items-center justify-between sticky top-0 z-50 bg-white ${
+      className={`px-4 md:px-8 lg:px-16 gap-4 flex items-center justify-between sticky top-0 z-50 bg-white ${
         scrolled ? "scrolled" : ""
       }`}
     >
@@ -42,12 +42,12 @@ export default function Header() {
       </div>
 
       {/* Right side: Auth buttons */}
-      <div className="hidden md:flex py-4 [.scrolled_&]:py-3 transition-all duration-300 items-center justify-end gap-4">
-        <nav className="hidden md:block">
-          <ul className="flex items-center gap-8">
+      <div className="hidden xl:flex py-4 [.scrolled_&]:py-3 transition-all duration-300 items-center justify-end gap-10">
+        <nav className="hidden xl:block">
+          <ul className="flex items-center gap-10">
             <li>
               <Link
-                className="py-2.5 text-corporate-black hover:text-corporate-blue transition"
+                className="py-2.5 text-sm text-corporate-black hover:text-corporate-blue transition"
                 href="#agents"
               >
                 Estate Agencies
@@ -55,7 +55,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                className="py-2.5 text-corporate-black hover:text-corporate-blue transition"
+                className="py-2.5 text-sm text-corporate-black hover:text-corporate-blue transition"
                 href="#software-company"
               >
                 Proptech & Software
@@ -63,7 +63,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                className="py-2.5 text-corporate-black hover:text-corporate-blue transition"
+                className="py-2.5 text-sm text-corporate-black hover:text-corporate-blue transition"
                 href="#integration"
               >
                 Integration
@@ -71,7 +71,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                className="py-2.5 text-corporate-black hover:text-corporate-blue transition"
+                className="py-2.5 text-sm text-corporate-black hover:text-corporate-blue transition"
                 href="#faq"
               >
                 FAQ
@@ -85,12 +85,12 @@ export default function Header() {
         <button className="py-2.5 px-4 cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80">
           Sign Up
         </button>*/}
-        <GetDemo text="Sign Up" />
+        <GetDemo size="small" text="Sign Up" />
       </div>
 
       {/* Burger menu button (mobile only) */}
       <button
-        className="md:hidden p-2 text-corporate-black"
+        className="xl:hidden p-2 text-corporate-black"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >

@@ -8,8 +8,8 @@
     --breakpoint-sm: 640px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 800px;
-    --breakpoint-xl: 992px;
-    --breakpoint-2xl: 1180px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1280px;
     --font-national: "National 2 Condensed", sans-serif;
     --font-lato: "Lato", sans-serif;
 }
@@ -123,12 +123,13 @@ html {
 
 .corporate-radial {
     background: radial-gradient(
-        31.52% 100% at 50% 0%,
-        rgba(190, 88, 249, 0.25) 13.46%,
-        rgba(0, 128, 255, 0.195) 37.93%,
-        rgba(179, 217, 255, 0.25) 65.15%,
-        rgba(255, 255, 255, 0.25) 94.73%
-    );
+            52.86% 167.69% at 28.91% -28.88%,
+            rgba(190, 88, 249, 0.25) 13.46%,
+            rgba(0, 128, 255, 0.195) 37.93%,
+            rgba(179, 217, 255, 0.25) 65.15%,
+            rgba(255, 255, 255, 0.25) 94.73%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 }
 
 .faq-wrapper {
@@ -138,28 +139,11 @@ html {
 .faq-answer-item {
     border: 2px solid #ffffff;
     overflow: hidden;
+    background-color: #ffffff;
     transition: 0.3s all;
     padding: 20px 40px;
     border-radius: 50px;
     gap: 24px;
-}
-
-.faq-answer-item.active {
-    background: radial-gradient(
-        56.41% 330.69% at 34% -102.83%,
-        rgba(190, 88, 249, 0.25) 13.46%,
-        rgba(0, 128, 255, 0.195) 37.93%,
-        rgba(179, 217, 255, 0.25) 65.15%,
-        rgba(255, 255, 255, 0.25) 94.73%
-    );
-    border: 2px solid;
-    border-image-source: radial-gradient(
-        56.41% 330.69% at 34% -102.83%,
-        rgba(190, 88, 249, 0.25) 13.46%,
-        rgba(0, 128, 255, 0.195) 37.93%,
-        rgba(179, 217, 255, 0.25) 65.15%,
-        rgba(255, 255, 255, 0.25) 94.73%
-    );
 }
 
 .faq-answer-header {
@@ -195,6 +179,8 @@ html {
 
 .faq-answer-content {
     display: none;
+    max-width: 520px;
+    margin-top: 16px;
 }
 
 .faq-answer-content p {
@@ -220,7 +206,6 @@ html {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    @apply bg-corporate-black/10 rounded-full;
 }
 
 .faq-icon img {
@@ -535,6 +520,14 @@ html {
 }
 .dialog-scrollable::-webkit-scrollbar-thumb:hover {
     background: #a0aec0;
+}
+
+.agents-swiper .swiper {
+    padding: 64px 0;
+}
+
+.agents-swiper .swiper-pagination {
+    bottom: 0 !important;
 }
 
 ._lock {

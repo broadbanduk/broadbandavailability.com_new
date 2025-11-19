@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  copperFrame,
-  partFibreFrame,
-  fullFibreFrame,
-  lessThan,
-} from "@/static/images";
+import { copperFrame, partFibreFrame, fullFibreFrame } from "@/static/images";
 import Image from "next/image";
 import { useState } from "react";
 import ReadMore from "./ReadMore";
@@ -44,17 +39,6 @@ export default function SolutionConnection() {
     );
   };
 
-  // Helpers for tab navigation
-  const goPrev = () => {
-    const currentIndex = tabs.indexOf(activeTab);
-    if (currentIndex > 0) setActiveTab(tabs[currentIndex - 1]);
-  };
-
-  const goNext = () => {
-    const currentIndex = tabs.indexOf(activeTab);
-    if (currentIndex < tabs.length - 1) setActiveTab(tabs[currentIndex + 1]);
-  };
-
   return (
     <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:items-center lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
       {/* Left content */}
@@ -86,27 +70,7 @@ export default function SolutionConnection() {
 
         {/* Image + Arrows */}
         <div className="flex items-center justify-center gap-4">
-          {/* Left Arrow (only visible if not first tab) */}
-          {activeTab !== "copper" && (
-            <button onClick={goPrev} className="cursor-pointer">
-              <Image
-                src={lessThan}
-                alt="previous"
-                width={24}
-                height={24}
-                className="rotate-180"
-              />
-            </button>
-          )}
-
           {renderImage()}
-
-          {/* Right Arrow (only visible if not last tab) */}
-          {activeTab !== "full-fibre" && (
-            <button onClick={goNext} className="cursor-pointer">
-              <Image src={lessThan} alt="next" width={24} height={24} />
-            </button>
-          )}
         </div>
       </div>
     </div>

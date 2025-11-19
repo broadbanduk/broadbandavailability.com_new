@@ -1,24 +1,35 @@
-import { footerLogo, linkedin } from "@/static/images";
+import { footerLogo, linkedin, website } from "@/static/images";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="bg-corporate-black py-4 px-3 sm:px-12 xl:px-[120px] lg:py-8">
-      <div className="flex flex-col lg:flex-row gap-5 items-start justify-between">
-        <div>
-          <Image src={footerLogo} alt="footerLogo" width={353} height={20} />
-          <p className="text-white text-xl pl-11">Connectivity Matters.</p>
-          <div className="flex items-center justify-start pl-10 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div className="flex flex-col justify-between h-full">
+          <div>
+            <Image
+              src={footerLogo}
+              alt="footerLogo"
+              className="max-h-8"
+              width={353}
+              height={32}
+            />
+            <p className="text-white text-xl pl-11">Connectivity Matters.</p>
+          </div>
+          <div className="flex items-center justify-start gap-6 mb-0 mt-auto">
+            <Link target="_blank" href="https://broadbanduk.com/">
+              <Image src={website} alt="website" width={24} height={24} />
+            </Link>
             <Link
               target="_blank"
               href="https://www.linkedin.com/showcase/broadbandavailability/"
             >
-              <Image src={linkedin} alt="linkedin" width={32} height={32} />
+              <Image src={linkedin} alt="linkedin" width={24} height={24} />
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-[1fr_auto_auto] gap-8 lg:gap-16">
+        <div className="flex flex-col md:flex-row md:flex-wrap md:justify-end gap-8 lg:gap-16">
           <div className="space-y-5">
             <p className="text-base text-white font-bold">Products</p>
             <div className="flex flex-col items-start gap-2.5">

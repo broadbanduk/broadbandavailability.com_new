@@ -1,6 +1,6 @@
 "use client";
 
-import { chevronRight, plus } from "@/static/images";
+import { darkChevron } from "@/static/images";
 import type { FAQItemType } from "@/types";
 import { slideDown, slideUp } from "@/utils";
 import Image from "next/image";
@@ -35,11 +35,8 @@ export default function FAQItem({
     >
       <div className={`faq-answer-header`}>
         <p className="faq-question">{item.question}</p>
-        <button
-          type="button"
-          className="faq-icon bg-corporate-black/30 rounded-full p-1"
-        >
-          <Image width={18} height={18} src={plus} alt="chevron" />
+        <button type="button" className="faq-icon">
+          <Image width={24} height={24} src={darkChevron} alt="chevron" />
         </button>
       </div>
       <div ref={contentRef} className="faq-answer-content">

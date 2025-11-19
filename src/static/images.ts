@@ -38,10 +38,24 @@ import plus from "../../asset/plus.svg";
 import linkedin from "../../asset/linkedin.svg";
 import brockTaylor from "../../asset/brock-taylor.png";
 import thomasSamuel from "../../asset/thomas-samuel.png";
+import darkChevron from "../../asset/chevron-right_dark.svg";
+import londonEquity from "../../asset/london-equity.png";
+import estateAgentToday from "../../asset/estate_agent_today.png";
+import propertyIndustryEye from "../../asset/property_industry_eye.png";
+import propertySoup from "../../asset/property_soup.png";
+import mirror from "../../asset/mirror.png";
+import website from "../../asset/website.svg";
 
 export {
   logo,
+  website,
+  mirror,
+  propertyIndustryEye,
+  propertySoup,
+  estateAgentToday,
   plus,
+  londonEquity,
+  darkChevron,
   brockTaylor,
   thomasSamuel,
   linkedin,

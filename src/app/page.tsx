@@ -1,6 +1,5 @@
 import Benefit from "@/components/Benefit/Benefit";
 import MainBenefit from "@/components/Benefit/MainBenefit";
-import EmailCTA from "@/components/CTA/EmailCTA";
 import FinalCTA from "@/components/CTA/FinalCTA";
 import IntegrationCTA from "@/components/CTA/IntegrationCTA";
 import FAQSection from "@/components/FAQ/FAQSection";
@@ -9,14 +8,16 @@ import Solution from "@/components/Solution/Solution";
 import HeroTicker from "@/components/Ticker/HeroTicker";
 import ISPTicker from "@/components/Ticker/ISPTicker";
 import TrustedBy from "@/components/TrustedBy/TrustedBy";
+import TrustedByAgents from "@/components/TrustedBy/TrustedByAgents";
+import TrustedByProperty from "@/components/TrustedBy/TrustedByProperty";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <HeroTicker />
-      <div className="corporate-radial px-3 py-4 sm:py-8 md:py-12 lg:py-16 xl:py-20 xl:px-0 flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-12 md:gap-16 xl:gap-28">
-        <p className="font-bold font-lato text-2xl text-corporate-black">
+      <div className="corporate-radial px-3 py-4 sm:py-10 sm:px-4 md:py-20 md:px-6 lg:py-32 lg:px-8 xl:py-[162.5] xl:px-16 flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-12 md:gap-16 xl:gap-28">
+        <p className="font-bold font-national uppercase leading-[2%] text-[52px] text-corporate-black">
           Introducing
         </p>
         <div className="space-y-8 max-w-3xl">
@@ -33,11 +34,12 @@ export default function Home() {
       </div>
       <Benefit />
       <Solution />
+      <TrustedByAgents />
       <MainBenefit />
       <IntegrationCTA />
-      <EmailCTA />
       <ISPTicker />
       <TrustedBy />
+      <TrustedByProperty />
       <FAQSection />
       <FinalCTA />
     </>

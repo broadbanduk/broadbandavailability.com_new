@@ -1,6 +1,6 @@
 "use client";
 
-import { img_providers_list, lessThan, providers } from "@/static/images";
+import { img_providers_list, providers } from "@/static/images";
 import Image from "next/image";
 import { useState } from "react";
 import ReadMore from "./ReadMore";
@@ -45,9 +45,7 @@ export default function SolutionProviders() {
         </p>
 
         {/* Responsive Image Container */}
-        <div
-          className={`flex items-center justify-between ${activeTab === "speeds" ? "flex-row-reverse" : ""} gap-5`}
-        >
+        <div className={`flex items-center justify-between gap-5`}>
           <div className="relative w-full max-w-[500px] mx-auto max-h-52 sm:max-h-64 md:max-h-72 lg:max-h-80">
             <Image
               src={activeTab === "providers" ? providers : img_providers_list}
@@ -56,20 +54,6 @@ export default function SolutionProviders() {
               priority
             />
           </div>
-          <button
-            onClick={() =>
-              setActiveTab(activeTab === "providers" ? "speeds" : "providers")
-            }
-            className="flex items-center justify-center h-full cursor-pointer"
-          >
-            <Image
-              className={activeTab === "speeds" ? "rotate-180" : ""}
-              src={lessThan}
-              alt="chevron right"
-              width={24}
-              height={24}
-            />
-          </button>
         </div>
       </div>
 

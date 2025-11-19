@@ -29,9 +29,7 @@ export default function ContactDialog() {
       message: "",
     } as ContactFormData,
     validationLogic: revalidateLogic(),
-    validators: {
-      onDynamic: ContactSchema,
-    },
+    validators: { onDynamic: ContactSchema },
     onSubmit: async ({ value }) => {
       try {
         ContactSchema.parse(value);
@@ -47,13 +45,13 @@ export default function ContactDialog() {
 
   return (
     <DialogBase dialogName="contact">
-      <div className="space-y-5">
-        <h2 className="text-2xl capitalize font-national font-bold text-corporate-black">
+      <div className="space-y-4">
+        <h2 className="text-2xl mb-5 capitalize font-lato font-bold text-corporate-black">
           Book demo
         </h2>
 
-        <p className="text-corporate-black/50">
-          Fill out the form below and we&apos;ll get back to you shortly.
+        <p className="text-corporate-black/50 capitalize">
+          Fill out the form below and we’ll get back to you shortly
         </p>
 
         <form
@@ -61,149 +59,196 @@ export default function ContactDialog() {
             e.preventDefault();
             form.handleSubmit();
           }}
-          className="space-y-4"
+          className="space-y-6"
         >
-          {/* Name (Required) */}
+          {/* NAME */}
           <form.Field name="name">
             {(field) => (
-              <div className="flex flex-col space-y-1">
-                <label className="text-sm font-medium text-corporate-black">
-                  Full Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  value={field.state.value}
-                  onChange={(e) => field.handleChange(e.target.value)}
-                  placeholder="Your full name"
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent transition"
-                />
+              <>
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder=" "
+                    value={field.state.value}
+                    onChange={(e) => field.handleChange(e.target.value)}
+                    className="peer w-full rounded-lg border border-gray-300 px-3 py-3 text-sm bg-white
+                               focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent
+                               transition"
+                  />
+
+                  <label
+                    className="absolute left-3 top-1/2 -translate-y-1/2 text-corporate-dark-grey text-sm
+                               pointer-events-none transition-all
+                               peer-focus:-top-2.5 peer-focus:left-0 peer-focus:font-bold peer-focus:text-corporate-black peer-focus:text-xs
+                               peer-not-placeholder-shown:-top-2.5 peer-not-placeholder-shown:left-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:text-corporate-black"
+                  >
+                    Your Full Name
+                  </label>
+                </div>
+
                 {field.state.meta.errors?.[0] && (
-                  <p className="text-sm text-red-500">
+                  <p className="text-sm text-red-500 mt-1">
                     {field.state.meta.errors[0].message}
                   </p>
                 )}
-              </div>
+              </>
             )}
           </form.Field>
 
-          {/* Email (Required) */}
+          {/* EMAIL */}
           <form.Field name="email">
             {(field) => (
-              <div className="flex flex-col space-y-1">
-                <label className="text-sm font-medium text-corporate-black">
-                  Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  value={field.state.value}
-                  onChange={(e) => field.handleChange(e.target.value)}
-                  placeholder="you@example.com"
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent transition"
-                />
+              <>
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder=" "
+                    value={field.state.value}
+                    onChange={(e) => field.handleChange(e.target.value)}
+                    className="peer w-full rounded-lg border border-gray-300 px-3 py-3 text-sm bg-white
+                               focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent
+                               transition"
+                  />
+
+                  <label
+                    className="absolute left-3 top-1/2 -translate-y-1/2 text-corporate-dark-grey text-sm
+                               pointer-events-none transition-all
+                               peer-focus:-top-2.5 peer-focus:left-0 peer-focus:font-bold peer-focus:text-corporate-black peer-focus:text-xs
+                               peer-not-placeholder-shown:-top-2.5 peer-not-placeholder-shown:left-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:text-corporate-black"
+                  >
+                    Email
+                  </label>
+                </div>
+
                 {field.state.meta.errors?.[0] && (
-                  <p className="text-sm text-red-500">
+                  <p className="text-sm text-red-500 mt-1">
                     {field.state.meta.errors[0].message}
                   </p>
                 )}
-              </div>
+              </>
             )}
           </form.Field>
 
-          {/* Company Name (Optional) */}
+          {/* COMPANY NAME */}
           <form.Field name="company_name">
             {(field) => (
-              <div className="flex flex-col space-y-1">
-                <label className="text-sm font-medium text-corporate-black">
-                  Company Name
-                </label>
+              <div className="relative">
                 <input
                   type="text"
+                  placeholder=" "
                   value={field.state.value}
                   onChange={(e) => field.handleChange(e.target.value)}
-                  placeholder="Your company name (optional)"
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent transition"
+                  className="peer w-full rounded-lg border border-gray-300 px-3 py-3 text-sm bg-white
+                             focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent
+                             transition"
                 />
+
+                <label
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-corporate-dark-grey text-sm
+                             pointer-events-none transition-all
+                             peer-focus:-top-2.5 peer-focus:left-0 peer-focus:font-bold peer-focus:text-corporate-black peer-focus:text-xs
+                             peer-not-placeholder-shown:-top-2.5 peer-not-placeholder-shown:left-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:text-corporate-black"
+                >
+                  Your Company name (optional)
+                </label>
               </div>
             )}
           </form.Field>
 
-          {/* Contact Number (Optional) */}
+          {/* CONTACT NUMBER */}
           <form.Field name="contact_number">
             {(field) => (
-              <div className="flex flex-col space-y-1">
-                <label className="text-sm font-medium text-corporate-black">
-                  Contact Number
-                </label>
+              <div className="relative">
                 <input
                   type="tel"
+                  placeholder=" "
                   value={field.state.value}
                   onChange={(e) => field.handleChange(e.target.value)}
-                  placeholder="Contact number (optional)"
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent transition"
+                  className="peer w-full rounded-lg border border-gray-300 px-3 py-3 text-sm bg-white
+                             focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent
+                             transition"
                 />
+
+                <label
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-corporate-dark-grey text-sm
+                             pointer-events-none transition-all
+                             peer-focus:-top-2.5 peer-focus:left-0 peer-focus:font-bold peer-focus:text-corporate-black peer-focus:text-xs
+                             peer-not-placeholder-shown:-top-2.5 peer-not-placeholder-shown:left-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:text-corporate-black"
+                >
+                  Contact number (optional)
+                </label>
               </div>
             )}
           </form.Field>
 
-          {/* Industry (Optional) */}
+          {/* INDUSTRY */}
           <form.Field name="industry">
             {(field) => (
-              <div className="flex flex-col space-y-1">
-                <label className="text-sm font-medium text-corporate-black">
-                  Industry
-                </label>
+              <div className="relative">
                 <select
                   value={field.state.value}
                   onChange={(e) => field.handleChange(e.target.value)}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent transition"
+                  className="peer w-full rounded-lg border border-gray-300 px-3 py-3 text-sm bg-white appearance-none
+                             focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent
+                             transition"
                 >
-                  <option hidden value="">
-                    Select your industry (optional)
-                  </option>
+                  <option hidden value=""></option>
                   <option value="Real Estate Agency">Real Estate Agency</option>
                   <option value="Software Company">Software Company</option>
                   <option value="Other">Other</option>
                 </select>
+
+                <label
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-corporate-dark-grey text-sm
+                             pointer-events-none transition-all
+                             peer-focus:-top-2.5 peer-focus:left-0 peer-focus:font-bold peer-focus:text-corporate-black peer-focus:text-xs
+                             peer-not-placeholder-shown:-top-2.5 peer-not-placeholder-shown:left-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:text-corporate-black"
+                >
+                  Industry (optional)
+                </label>
               </div>
             )}
           </form.Field>
 
-          {/* Message (Required) */}
+          {/* MESSAGE (converted to floating text input style) */}
           <form.Field name="message">
             {(field) => (
-              <div className="flex flex-col space-y-1">
-                <label className="text-sm font-medium text-corporate-black">
-                  Message <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  rows={4}
-                  value={field.state.value}
-                  onChange={(e) => field.handleChange(e.target.value)}
-                  placeholder="Your message..."
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent transition resize-none"
-                />
+              <>
+                <div className="relative">
+                  <input
+                    placeholder=" "
+                    type="text"
+                    value={field.state.value}
+                    onChange={(e) => field.handleChange(e.target.value)}
+                    className="peer w-full rounded-lg border border-gray-300 px-3 py-3 text-sm bg-white resize-none
+                               focus:outline-none focus:ring-2 focus:ring-corporate-blue focus:border-transparent
+                               transition"
+                  />
+
+                  <label
+                    className="absolute left-3 top-1/2 -translate-y-1/2 text-corporate-dark-grey text-sm
+                               pointer-events-none transition-all
+                               peer-focus:-top-2.5 peer-focus:left-0 peer-focus:font-bold peer-focus:text-corporate-black peer-focus:text-xs
+                               peer-not-placeholder-shown:-top-2.5 peer-not-placeholder-shown:left-0 peer-not-placeholder-shown:text-xs peer-not-placeholder-shown:font-bold peer-not-placeholder-shown:text-corporate-black"
+                  >
+                    Your Message
+                  </label>
+                </div>
+
                 {field.state.meta.errors?.[0] && (
-                  <p className="text-sm text-red-500">
+                  <p className="text-sm text-red-500 mt-1">
                     {field.state.meta.errors[0].message}
                   </p>
                 )}
-              </div>
+              </>
             )}
           </form.Field>
 
-          {/* Buttons */}
-          <div className="pt-2 grid grid-cols-2 gap-4">
-            {/*<button
-              type="button"
-              onClick={() => closeDialog("contact")}
-              className="w-full py-2.5 px-12 bg-white border border-gray-400 cursor-pointer text-corporate-black rounded-full hover:bg-gray-100 transition-all duration-300"
-            >
-              Cancel
-            </button>*/}
-
+          {/* SUBMIT BUTTON */}
+          <div className="pt-2 gap-4 flex items-center justify-center">
             <button
               type="submit"
-              className="w-full col-span-2 py-2.5 px-12 bg-corporate-blue cursor-pointer text-white rounded-full hover:opacity-90 transition-all duration-300"
+              className="w-full max-w-xs mx-auto py-2.5 px-12 bg-corporate-blue cursor-pointer text-white rounded-full hover:opacity-90 transition-all duration-300"
             >
               Submit
             </button>

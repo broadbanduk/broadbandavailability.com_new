@@ -26,18 +26,18 @@ export default function DialogBase({
       <div
         ref={dialogRef}
         style={{ maxWidth: `${size}px` }}
-        className="w-full bg-white rounded-xl flex flex-col overflow-hidden"
+        className="w-full relative bg-white rounded-xl flex flex-col overflow-hidden"
       >
-        <div className="px-9 pt-4 flex-shrink-0">
+        <div className="absolute top-5 right-5">
           <button
             onClick={() => closeDialog(dialogName)}
             className={`cursor-pointer flex items-center justify-center mr-0 ml-auto border-none bg-transparent`}
           >
-            <X size={20} />
+            <X size={24} />
           </button>
         </div>
         <div
-          className="px-9 pb-4 overflow-y-auto flex-1 space-y-6 dialog-scrollable"
+          className="px-9 py-4 overflow-y-auto flex-1 space-y-6 dialog-scrollable"
           style={{
             scrollbarWidth: "thin",
             scrollbarColor: "#CBD5E0 #F7FAFC",

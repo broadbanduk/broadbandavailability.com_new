@@ -8,30 +8,31 @@ export default function Hero() {
       id="hero"
       className="bg-light-gray-bg py-4 px-3 lg:px-0 lg:py-[120px]"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 container gap-16 items-center mx-auto">
-        <div className="space-y-5 lg:space-y-11">
+      <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] container gap-16 items-center mx-auto">
+        <div className="space-y-8 lg:space-y-16 max-w-md">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national tracking-wide font-bold text-corporate-black uppercase">
-            Broadband data for every property.
+            Broadband Intelligence. <br /> for every UK property.
           </h1>
           <div className="space-y-4">
             <p className="text-xl text-corporate-black">
-              Address-level broadband intelligence for estate agents and
-              proptech platforms.
-            </p>
-            <p className="text-xl text-corporate-black">
-              Empowering estate agents to show accurate broadband speeds,
-              availability and connection types for every address across the UK.
+              Show homemovers accurate broadband availability for every UK
+              address
             </p>
           </div>
-          <GetDemo text="Book Demo" />
+          <div className="space-y-2 flex flex-col items-center w-fit justify-start">
+            <GetDemo size="big" text="Start for Free" />
+            <span className="text-sm text-corporate-black opacity-60">
+              No credit card required
+            </span>
+          </div>
         </div>
         <div className="">
           <Image
             src={heroImage}
             alt="Hero Image"
             className="w-full"
-            width={500}
-            height={280}
+            width={700}
+            height={440}
           />
         </div>
       </div>
