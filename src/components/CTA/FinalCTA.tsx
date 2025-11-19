@@ -13,6 +13,9 @@ export default function FinalCTA() {
           property.
         </p>
         <GetDemo text="Start Free" siteSection="Final CTA Section" />
+        <p className="text-corporate-black text-xs opacity-60">
+          No credit card required
+        </p>
       </div>
     </section>
   );
