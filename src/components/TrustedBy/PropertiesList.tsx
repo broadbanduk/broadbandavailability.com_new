@@ -9,7 +9,6 @@ import {
   propertySoup,
 } from "@/static/images";
 import { useState } from "react";
-import ReadMore from "../Solution/ReadMore";
 import Link from "next/link";
 
 const properties = [
