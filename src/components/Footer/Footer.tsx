@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-corporate-black py-4 px-3 sm:px-12 xl:px-[120px] lg:py-8">
+    <footer className="bg-corporate-black py-4 px-4 md:px-8 lg:px-16 lg:py-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <div className="flex flex-col justify-between h-full">
           <div>
@@ -17,7 +17,7 @@ export default function Footer() {
             />
             <p className="text-white text-xl pl-11">Connectivity Matters.</p>
           </div>
-          <div className="flex items-center justify-start gap-6 mb-0 mt-auto">
+          <div className="flex items-center justify-start gap-3 mb-0 mt-auto">
             <Link target="_blank" href="https://broadbanduk.com/">
               <Image src={website} alt="website" width={24} height={24} />
             </Link>

@@ -59,7 +59,7 @@ export default function SolutionProviders() {
 
       {/* Right content */}
       <div className="max-w-md space-y-3 px-5 text-left order-1">
-        <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-lato text-corporate-black font-bold">
+        <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-national uppercase text-corporate-black font-bold">
           2. Available providers
         </p>
         <ReadMore text="Clients often waste time searching multiple websites to see which ISPs are available. Now they don’t have to. All providers are shown in one place, directly on your listing and saving time, removing uncertainty and giving you the credibility of being fully transparent." />

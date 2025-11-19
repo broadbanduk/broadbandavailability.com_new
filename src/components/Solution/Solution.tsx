@@ -1,9 +1,8 @@
-import { brockTaylor, speeds, thomasSamuel } from "@/static/images";
+import { speeds } from "@/static/images";
 import Image from "next/image";
 import SolutionProviders from "./SolutionProviders";
 import SolutionConnection from "./SolutionConnection";
 import ReadMore from "./ReadMore";
-import Link from "next/link";
 
 export default function Solution() {
   return (
@@ -12,16 +11,17 @@ export default function Solution() {
       className="bg-light-gray-bg py-4 sm:py-8 md:py-10 lg:py-12 xl:py-24 px-3 sm:px-6 md:px-8 lg:px-10 xl:px-20"
     >
       <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national mb-4 md:mb-6 xl:mb-10 uppercase text-center tracking-wide text-corporate-black font-bold">
-        Solution
+        The Solution
       </h3>
       <p className="mb-14 sm:mb-16 md:mb-18 xl:mb-[120px] mx-auto container px-3 sm:px-6 md:px-8 lg:px-12 xl:px-24 text-center text-corporate-black text-sm md:text-base lg:text-lg xl:text-xl">
         When a client browses your property listings, they shouldn’t have to
-        leave your site to find out about broadband.
+        leave your site to find out about broadband. With our service, the
+        answers are there — automatically, at the click of a button.
       </p>
       <div className="space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 xl:space-y-16 mb-10 lg:mb-20">
         <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:items-center lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-4 lg:py-8 px-5 lg:px-10">
           <div className="max-w-md px-5 space-y-3">
-            <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-lato text-corporate-black font-bold">
+            <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-national uppercase text-corporate-black font-bold">
               1. Real internet speeds
             </p>
             <ReadMore

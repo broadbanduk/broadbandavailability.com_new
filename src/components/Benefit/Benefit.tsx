@@ -1,4 +1,4 @@
-import { checkCircle, coin, globe, house, shieldSlash } from "@/static/images";
+import { checkCircle, house, shieldSlash } from "@/static/images";
 import BenefitItem from "./BenefitItem";
 
 const benefits = [

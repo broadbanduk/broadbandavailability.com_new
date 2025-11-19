@@ -27,22 +27,6 @@ const properties = [
     image: mirror,
     text: "Broadband is now the fourth essential utility, alongside electricity, gas, and water.",
   },
-  {
-    image: estateAgentToday,
-    text: "The new service from Nurtur and BroadbandUK integrates into estate agent websites, displaying property specific broadband data alongside standard listing details.",
-  },
-  {
-    image: propertyIndustryEye,
-    text: "Fast, reliable broadband can increase a property’s price by £3,500+, while weak connectivity can cut perceived value by a quarter.",
-  },
-  {
-    image: propertySoup,
-    text: "Estate agents must provide all material information essential for informed property decisions.",
-  },
-  {
-    image: mirror,
-    text: "Broadband is now the fourth essential utility, alongside electricity, gas, and water.",
-  },
 ];
 
 export default function PropertiesList() {

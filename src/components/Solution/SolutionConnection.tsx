@@ -43,7 +43,7 @@ export default function SolutionConnection() {
     <div className="container appearBlock bg-white flex flex-col lg:grid grid-cols-2 items-start lg:items-center lg:justify-center justify-between gap-5 mx-auto rounded-[28px] py-8 px-5 lg:px-10">
       {/* Left content */}
       <div className="max-w-md space-y-3 px-5 text-left">
-        <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-lato text-corporate-black font-bold">
+        <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-national uppercase text-corporate-black font-bold">
           3. Connection technology
         </p>
         <ReadMore text="ADSL, FTTC, FTTP — these acronyms confuse most clients. We remove the guesswork. The tool shows the real connection type available at the property, making it simple to understand whether the home has basic broadband or full fibre." />

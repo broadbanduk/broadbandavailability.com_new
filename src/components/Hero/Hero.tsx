@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] container gap-16 items-center mx-auto">
         <div className="space-y-8 lg:space-y-16 max-w-md">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-national tracking-wide font-bold text-corporate-black uppercase">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[80px] font-national tracking-[2%] font-bold text-corporate-black uppercase">
             Broadband Intelligence. <br /> for every UK property.
           </h1>
           <div className="space-y-4">
@@ -30,7 +30,7 @@ export default function Hero() {
           <Image
             src={heroImage}
             alt="Hero Image"
-            className="w-full"
+            className="w-full max-h-[440px] max-w-[700,63px]"
             width={700}
             height={440}
           />

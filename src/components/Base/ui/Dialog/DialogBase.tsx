@@ -37,7 +37,7 @@ export default function DialogBase({
           </button>
         </div>
         <div
-          className="px-9 py-4 overflow-y-auto flex-1 space-y-6 dialog-scrollable"
+          className="px-5 py-5 overflow-y-auto flex-1 space-y-6 dialog-scrollable"
           style={{
             scrollbarWidth: "thin",
             scrollbarColor: "#CBD5E0 #F7FAFC",

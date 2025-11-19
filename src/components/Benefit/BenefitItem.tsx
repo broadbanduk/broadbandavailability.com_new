@@ -12,7 +12,7 @@ export default function BenefitItem({
   description: string;
 }) {
   return (
-    <div className="space-y-5 flex flex-col items-center text-center sm:max-w-xs mx-auto">
+    <div className="space-y-5 last:max-w-[270px] flex flex-col items-center text-center sm:max-w-xs mx-auto">
       <Image src={icon} width={42} height={44} alt={alt} />
       <h3 className="text-sm md:text-base lg:text-lg xl:text-xl px-5 font-lato font-bold text-corporate-black">
         {title}

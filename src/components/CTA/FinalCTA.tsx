@@ -1,4 +1,3 @@
-import Link from "next/link";
 import GetDemo from "./GetDemo";
 
 export default function FinalCTA() {
@@ -13,10 +12,7 @@ export default function FinalCTA() {
           and give your clients reliable internet information for every
           property.
         </p>
-        <GetDemo text="Book Demo" />
-        <p className="text-corporate-black text-xs opacity-60">
-          No credit card required
-        </p>
+        <GetDemo text="Start Free" />
       </div>
     </section>
   );
