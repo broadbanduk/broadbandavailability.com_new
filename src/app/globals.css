@@ -123,13 +123,26 @@ html {
 
 .corporate-radial {
     background: radial-gradient(
-            52.86% 167.69% at 28.91% -28.88%,
+            179.38% 387.72% at -11.35% -101.74%,
             rgba(190, 88, 249, 0.25) 13.46%,
             rgba(0, 128, 255, 0.195) 37.93%,
             rgba(179, 217, 255, 0.25) 65.15%,
             rgba(255, 255, 255, 0.25) 94.73%
         )
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+@media (min-width: 768px) {
+    .corporate-radial {
+        background: radial-gradient(
+                52.86% 167.69% at 28.91% -28.88%,
+                rgba(190, 88, 249, 0.25) 13.46%,
+                rgba(0, 128, 255, 0.195) 37.93%,
+                rgba(179, 217, 255, 0.25) 65.15%,
+                rgba(255, 255, 255, 0.25) 94.73%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    }
 }
 
 .faq-wrapper {
@@ -141,9 +154,15 @@ html {
     overflow: hidden;
     background-color: #ffffff;
     transition: 0.3s all;
-    padding: 20px 40px;
+    padding: 20px;
     border-radius: 50px;
     gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .faq-answer-item {
+        padding: 20px 40px;
+    }
 }
 
 .faq-answer-header {
@@ -523,7 +542,7 @@ html {
 }
 
 .agents-swiper .swiper {
-    padding: 64px 0;
+    padding: 0 0 64px 0;
 }
 
 .agents-swiper .swiper-pagination {

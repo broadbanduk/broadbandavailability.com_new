@@ -5,9 +5,13 @@ import { useDialogStore } from "@/store/useDialogStore";
 export default function GetDemo({
   text = "Get Demo",
   size = "base",
+  siteSection,
+  buttonAdditionalClassName,
 }: {
   text?: string;
   size?: "small" | "base" | "big";
+  siteSection?: string;
+  buttonAdditionalClassName?: string;
 }) {
   const { openDialog } = useDialogStore();
 
@@ -24,8 +28,8 @@ export default function GetDemo({
 
   return (
     <button
-      onClick={() => openDialog("contact")}
-      className={`${buttonClassName()} cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80`}
+      onClick={() => openDialog("contact", siteSection)}
+      className={`${buttonClassName()} cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80 ${buttonAdditionalClassName}`}
     >
       {text}
     </button>

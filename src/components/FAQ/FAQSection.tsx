@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const items: FAQItemType[] = [
   {
-    question: "⁠What is the Broadband Availability service?",
+    question: "What is the Broadband Availability service?",
     answer:
       "Broadband Availability provides accurate, address-level broadband data for property listings. It shows the real speeds, available ISPs, and connection types (such as full fibre or FTTC) for each individual property, replacing unreliable postcode-level estimates.",
   },
@@ -53,10 +53,10 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="bg-light-gray-bg px-3 sm:px-6 md:px-12 lg:px-16 xl:px-[72px] py-4 sm:py-8 md:py-12 lg:py-16 xl:py-[120px] space-y-10 lg:space-y-20"
+      className="bg-light-gray-bg py-16 px-5 sm:px-6 md:px-12 lg:px-16 xl:px-[72px] xl:py-[120px] space-y-10 lg:space-y-20"
     >
-      <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-[1fr_auto] container mx-auto">
-        <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-[52px] font-national uppercase tracking-wide text-corporate-black font-bold">
+      <div className="grid grid-cols-1 gap-10 lg:gap-16 lg:grid-cols-[1fr_auto] container mx-auto">
+        <h3 className="text-[52px] leading-[1] xl:text-6xl text-center lg:text-left font-national uppercase tracking-wide text-corporate-black font-bold">
           Frequently Asked Questions
         </h3>
         <div className="faq-tabs-answers max-w-3xl mx-auto">

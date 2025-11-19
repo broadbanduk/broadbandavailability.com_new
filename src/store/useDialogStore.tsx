@@ -4,7 +4,8 @@ import { create } from "zustand";
 export type DialogStoreType = {
   openDialogByType: Record<DialogStoreActionType, boolean>;
   isOpen: boolean;
-  openDialog: (type: DialogStoreActionType) => void;
+  siteSection: string | null;
+  openDialog: (type: DialogStoreActionType, siteSection?: string) => void;
   closeDialog: (type: DialogStoreActionType) => void;
   toggleDialog: (type: DialogStoreActionType) => void;
 };
@@ -12,15 +13,17 @@ export type DialogStoreType = {
 export const useDialogStore = create<DialogStoreType>((set) => ({
   isOpen: false,
   queryKey: [],
+  siteSection: null,
   openDialogByType: {
     contact: false,
   },
-  openDialog: (type) =>
+  openDialog: (type, siteSection) =>
     set((s) => {
       const htmlDoc = document.documentElement;
       htmlDoc.classList.add("_lock");
       return {
         openDialogByType: { ...s.openDialogByType, [type]: true },
+        siteSection: siteSection || null,
       };
     }),
   closeDialog: (type) =>
@@ -29,6 +32,7 @@ export const useDialogStore = create<DialogStoreType>((set) => ({
       htmlDoc.classList.remove("_lock");
       return {
         openDialogByType: { ...s.openDialogByType, [type]: false },
+        siteSection: null,
       };
     }),
   toggleDialog: (type) =>

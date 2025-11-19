@@ -45,10 +45,12 @@ import propertyIndustryEye from "../../asset/property_industry_eye.png";
 import propertySoup from "../../asset/property_soup.png";
 import mirror from "../../asset/mirror.png";
 import website from "../../asset/website.svg";
+import motisEstates from "../../asset/motis_estates.png";
 
 export {
   logo,
   website,
+  motisEstates,
   mirror,
   propertyIndustryEye,
   propertySoup,

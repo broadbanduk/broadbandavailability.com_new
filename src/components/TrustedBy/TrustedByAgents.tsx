@@ -2,7 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { brockTaylor, londonEquity, thomasSamuel } from "@/static/images";
+import {
+  brockTaylor,
+  londonEquity,
+  thomasSamuel,
+  motisEstates,
+} from "@/static/images";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -27,15 +32,15 @@ export default function TrustedByAgents() {
       image: londonEquity,
     },
     {
-      name: "Brock Taylor",
-      url: "https://www.brocktaylor.co.uk",
-      image: brockTaylor,
+      name: "Motis Estates",
+      url: "https://www.motis-estates.com/",
+      image: motisEstates,
     },
   ];
 
   return (
-    <section className="pt-5 sm:pt-10 md:pt-16 lg:pt-20 xl:pt-[120px] space-y-8 lg:space-y-16">
-      <h3 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-4xl mx-auto font-national uppercase text-center tracking-wide text-corporate-black font-bold">
+    <section className="px-5 pt-16 lg:pt-20 xl:pt-[120px] space-y-8 lg:space-y-16">
+      <h3 className="text-[52px] leading-[1] xl:text-6xl max-w-4xl mx-auto font-national uppercase text-center tracking-wide text-corporate-black font-bold">
         How Agents Integrate Broadband Information in Listings
       </h3>
       <div className="container mx-auto agents-swiper">
@@ -44,7 +49,6 @@ export default function TrustedByAgents() {
           spaceBetween={20}
           pagination={{ clickable: true }}
           slidesPerView={1}
-          loop={true}
           centerInsufficientSlides
           breakpoints={{
             1024: { slidesPerView: 2 },
@@ -53,7 +57,7 @@ export default function TrustedByAgents() {
           {agents.map((agent, index) => (
             <SwiperSlide key={index}>
               <Link
-                className="bg-light-gray-bg p-10 rounded-[28px] space-y-5 block"
+                className="bg-light-gray-bg p-5 lg:p-10 rounded-[28px] space-y-5 block"
                 target="_blank"
                 href={agent.url}
               >
@@ -61,7 +65,7 @@ export default function TrustedByAgents() {
                   {agent.name}
                 </h4>
 
-                <span className="text-corporate-blue text-lg underline block">
+                <span className="text-corporate-blue text-sm lg:text-lg underline block">
                   {agent.url}
                 </span>
 

@@ -14,13 +14,13 @@ export default function ReadMore({ text }: { text: string }) {
   return (
     <>
       <p
-        className={`text-sm md:text-base lg:text-lg xl:text-xl text-corporate-black transition-all duration-300 ${isExpanded ? "line-clamp-none" : "line-clamp-3"}`}
+        className={`text-xl text-corporate-black transition-all duration-300 ${isExpanded ? "line-clamp-none" : "line-clamp-3"}`}
       >
         {text}
       </p>
       <button
         onClick={toggleReadMore}
-        className="flex items-center cursor-pointer justify-start gap-2 text-sm md:text-base lg:text-lg xl:text-xl text-corporate-blue"
+        className="flex items-center cursor-pointer justify-start gap-2 text-xl text-corporate-blue"
       >
         Read {isExpanded ? "less" : "more"}{" "}
         <Image

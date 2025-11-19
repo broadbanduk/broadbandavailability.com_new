@@ -85,7 +85,7 @@ export default function Header() {
         <button className="py-2.5 px-4 cursor-pointer bg-corporate-blue text-white transition-all duration-300 ease-in-out rounded-full hover:opacity-80">
           Sign Up
         </button>*/}
-        <GetDemo size="small" text="Sign Up" />
+        <GetDemo siteSection="Sign Up Header" size="small" text="Sign Up" />
       </div>
 
       {/* Burger menu button (mobile only) */}
@@ -100,7 +100,7 @@ export default function Header() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
-          <nav className="flex flex-col p-6 gap-4">
+          <nav className="flex flex-col px-6 py-7 items-center gap-7">
             <Link
               href="#agents"
               onClick={() => setIsOpen(false)}
@@ -130,7 +130,11 @@ export default function Header() {
               FAQ
             </Link>
 
-            <GetDemo text="Sign Up" />
+            <GetDemo
+              buttonAdditionalClassName="w-full"
+              siteSection="Sign Up Header (Mobile)"
+              text="Sign Up"
+            />
             {/*<div className="flex flex-col gap-3 mt-4">
               <button className="w-full py-2.5 rounded-full text-corporate-black border border-transparent hover:border-corporate-blue">
                 Log in

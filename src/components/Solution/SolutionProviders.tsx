@@ -16,7 +16,7 @@ export default function SolutionProviders() {
         {/* Tabs */}
         <div className="flex mb-4 p-1.5 bg-light-gray-bg rounded-[28px] w-fit mx-auto items-center justify-center">
           <button
-            className={`rounded-[28px] px-4 cursor-pointer py-2 text-corporate-black transition-all duration-300 ${
+            className={`rounded-[28px] px-4 cursor-pointer py-2 text-sm lg:text-base text-corporate-black transition-all duration-300 ${
               activeTab === "providers"
                 ? "bg-corporate-blue text-white"
                 : "bg-transparent text-corporate-black"
@@ -26,7 +26,7 @@ export default function SolutionProviders() {
             Providers
           </button>
           <button
-            className={`rounded-[28px] px-4 cursor-pointer py-2 text-corporate-black transition-all duration-300 ${
+            className={`rounded-[28px] px-4 cursor-pointer py-2 text-sm lg:text-base text-corporate-black transition-all duration-300 ${
               activeTab === "speeds"
                 ? "bg-corporate-blue text-white"
                 : "bg-transparent text-corporate-black"
@@ -59,7 +59,7 @@ export default function SolutionProviders() {
 
       {/* Right content */}
       <div className="max-w-md space-y-3 px-5 text-left order-1">
-        <p className="mb-6 text-lg sm:text-xl lg:text-2xl xl:text-4xl font-national uppercase text-corporate-black font-bold">
+        <p className="mb-6 text-[40px] leading-[1] font-national uppercase text-corporate-black font-bold">
           2. Available providers
         </p>
         <ReadMore text="Clients often waste time searching multiple websites to see which ISPs are available. Now they don’t have to. All providers are shown in one place, directly on your listing and saving time, removing uncertainty and giving you the credibility of being fully transparent." />

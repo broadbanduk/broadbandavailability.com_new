@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {
+  blueChevronRight,
   estateAgentToday,
   mirror,
   propertyIndustryEye,
@@ -9,23 +10,28 @@ import {
 } from "@/static/images";
 import { useState } from "react";
 import ReadMore from "../Solution/ReadMore";
+import Link from "next/link";
 
 const properties = [
   {
     image: estateAgentToday,
     text: "The new service from Nurtur and BroadbandUK integrates into estate agent websites, displaying property specific broadband data alongside standard listing details.",
+    link: "https://www.estateagenttoday.co.uk/breaking-news/2025/10/nurtur-and-broadbanduk-launch-true-internet-speed-service-for-property-listings/",
   },
   {
     image: propertyIndustryEye,
     text: "Fast, reliable broadband can increase a property’s price by £3,500+, while weak connectivity can cut perceived value by a quarter.",
+    link: "https://propertyindustryeye.com/nurtur-and-broadbanduk-launch-new-broadband-service-for-estate-agents/",
   },
   {
     image: propertySoup,
     text: "Estate agents must provide all material information essential for informed property decisions.",
+    link: "https://propertysoup.co.uk/nurtur-and-broadbanduk-launch-service-for-property-listings/",
   },
   {
     image: mirror,
     text: "Broadband is now the fourth essential utility, alongside electricity, gas, and water.",
+    link: "https://www.mirror.co.uk/money/millions-should-check-broadband-speed-35932159",
   },
 ];
 
@@ -43,7 +49,7 @@ export default function PropertiesList() {
       <div className="container mx-auto grid grid-cols-1 gap-5 lg:grid-cols-2">
         {visibleProperties.map((property, index) => (
           <div
-            className="rounded-[28px] p-10 bg-light-gray-bg space-y-3"
+            className="rounded-[28px] p-5 lg:p-10 bg-light-gray-bg space-y-3"
             key={index}
           >
             <Image
@@ -52,7 +58,21 @@ export default function PropertiesList() {
               src={property.image}
               alt={`Property ${index + 1}`}
             />
-            <ReadMore text={property.text} />
+            <p className="text-xl text-corporate-black">{property.text}</p>
+            <Link
+              target="_blank"
+              href={property.link}
+              className="flex items-center cursor-pointer justify-start gap-2 text-xl text-corporate-blue"
+            >
+              Read more
+              <Image
+                width={24}
+                height={24}
+                src={blueChevronRight}
+                className={`transition-transform`}
+                alt="blue chevron"
+              />
+            </Link>
           </div>
         ))}
       </div>

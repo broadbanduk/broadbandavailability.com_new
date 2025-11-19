@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="bg-light-gray-bg py-4 px-3 lg:px-0 lg:py-[120px]"
+      className="bg-light-gray-bg py-16 px-5 xl:px-0 lg:py-[120px]"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] container gap-16 items-center mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] container gap-10 lg:gap-16 items-center mx-auto">
         <div className="space-y-8 lg:space-y-16 max-w-md">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[80px] font-national tracking-[2%] font-bold text-corporate-black uppercase">
+          <h1 className="text-[52px] md:text-[60px] lg:text-[72px] xl:text-[80px] leading-[1] font-national tracking-[2%] font-bold text-corporate-black uppercase">
             Broadband Intelligence. <br /> for every UK property.
           </h1>
           <div className="space-y-4">
@@ -19,14 +19,19 @@ export default function Hero() {
               address
             </p>
           </div>
-          <div className="space-y-2 flex flex-col items-center w-fit justify-start">
-            <GetDemo size="big" text="Start for Free" />
+          <div className="space-y-2 flex-col items-center hidden lg:flex justify-start">
+            <GetDemo
+              siteSection="Hero Section"
+              size="big"
+              buttonAdditionalClassName="w-full md:w-fit"
+              text="Start for Free"
+            />
             <span className="text-sm text-corporate-black opacity-60">
               No credit card required
             </span>
           </div>
         </div>
-        <div className="">
+        <div className="space-y-10">
           <Image
             src={heroImage}
             alt="Hero Image"
@@ -34,6 +39,17 @@ export default function Hero() {
             width={700}
             height={440}
           />
+          <div className="space-y-2 flex-col items-center flex lg:hidden justify-start">
+            <GetDemo
+              siteSection="Hero Section"
+              size="big"
+              buttonAdditionalClassName="w-full lg:w-fit"
+              text="Start for Free"
+            />
+            <span className="text-sm text-corporate-black opacity-60">
+              No credit card required
+            </span>
+          </div>
         </div>
       </div>
     </section>

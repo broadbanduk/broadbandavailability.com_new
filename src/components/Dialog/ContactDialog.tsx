@@ -4,7 +4,8 @@ import { revalidateLogic, useForm } from "@tanstack/react-form";
 import { z } from "zod";
 import { useDialogStore } from "@/store/useDialogStore";
 import DialogBase from "../Base/ui/Dialog/DialogBase";
-import { darkChevron } from "@/static/images";
+import { useState } from "react";
+import { submitAccessRequest, ApiError } from "@/lib/form-submissions";
 
 const ContactSchema = z.object({
   name: z.string().min(4, "Please enter a full name."),
@@ -18,7 +19,10 @@ const ContactSchema = z.object({
 type ContactFormData = z.infer<typeof ContactSchema>;
 
 export default function ContactDialog() {
-  const { closeDialog, openDialogByType } = useDialogStore();
+  const { closeDialog, openDialogByType, siteSection } = useDialogStore();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const form = useForm({
     defaultValues: {
@@ -26,18 +30,50 @@ export default function ContactDialog() {
       email: "",
       company_name: "",
       contact_number: "",
-      // industry: "",
+      industry: "",
       message: "",
     } as ContactFormData,
     validationLogic: revalidateLogic(),
-    validators: { onDynamic: ContactSchema },
+    validators: {
+      onDynamic: ContactSchema,
+    },
     onSubmit: async ({ value }) => {
+      setIsSubmitting(true);
+      setSubmitError(null);
+      setSubmitSuccess(false);
+
       try {
         ContactSchema.parse(value);
-        console.log("✅ Form submitted successfully", value);
-        closeDialog("contact");
+
+        // Submit to API
+        const response = await submitAccessRequest({
+          name: value.name,
+          email: value.email,
+          company_name: value.company_name,
+          contact_number: value.contact_number,
+          // industry: value.industry,
+          message: value.message,
+          site_section: siteSection || undefined,
+        });
+
+        if (response.success) {
+          setSubmitSuccess(true);
+          // Close dialog after a short delay to show success message
+          setTimeout(() => {
+            closeDialog("contact");
+            form.reset();
+            setSubmitSuccess(false);
+          }, 2000);
+        }
       } catch (err) {
-        console.error("❌ Validation failed", err);
+        if (err instanceof ApiError) {
+          setSubmitError(err.message);
+        } else {
+          setSubmitError("An unexpected error occurred. Please try again.");
+        }
+        console.error("❌ Submission failed", err);
+      } finally {
+        setIsSubmitting(false);
       }
     },
   });
@@ -245,13 +281,34 @@ export default function ContactDialog() {
             )}
           </form.Field>
 
+          {/* Success Message */}
+          {submitSuccess && (
+            <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
+              <p className="text-sm text-green-700">
+                ✓ Your request has been sent successfully!
+              </p>
+            </div>
+          )}
+
+          {/* Error Message */}
+          {submitError && (
+            <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-sm text-red-700">{submitError}</p>
+            </div>
+          )}
+
           {/* SUBMIT BUTTON */}
           <div className="pt-2 gap-4 flex items-center justify-center">
             <button
               type="submit"
+              disabled={isSubmitting || submitSuccess}
               className="w-full max-w-xs mx-auto py-2.5 px-12 bg-corporate-blue cursor-pointer text-white rounded-full hover:opacity-90 transition-all duration-300"
             >
-              Submit
+              {isSubmitting
+                ? "Submitting..."
+                : submitSuccess
+                  ? "Sent!"
+                  : "Submit"}
             </button>
           </div>
         </form>
