@@ -20,6 +20,21 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Deployment
+
+This project uses [Laravel Forge](https://forge.laravel.com) for automated deployments:
+
+- **Development**: Changes pushed to the `dev` branch automatically deploy to [https://dev.broadbandavailability.com](https://dev.broadbandavailability.com)
+- **Production**: Merges to the `main` branch automatically deploy to [https://broadbandavailability.com](https://broadbandavailability.com)
+
+### Recommended Workflow
+
+1. Create a feature branch from `dev`
+2. Develop and test your changes locally
+3. Once work is completed, create a pull request to `dev`
+4. After merge to `dev`, clients will review changes on the development site
+5. Once approved, merge `dev` to `main` for production deployment
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
