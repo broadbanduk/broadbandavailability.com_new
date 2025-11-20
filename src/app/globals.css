@@ -45,6 +45,11 @@ html {
     padding: 40px 0;
 }
 
+.ticker-wrap img {
+    max-width: initial;
+    height: 100%;
+}
+
 .isp-ticker {
     background: radial-gradient(
         58.72% 247.69% at 28.67% -107.43%,
