@@ -63,6 +63,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: process.env.NEXT_PUBLIC_DOMAIN || "https://broadbandavailability.com",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" }
+    ],
+  },
 };
 
 export default function RootLayout({
