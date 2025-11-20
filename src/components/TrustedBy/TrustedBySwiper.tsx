@@ -26,11 +26,13 @@ const slidesData = [
 export default function TrustedBySwiper() {
   return (
     <Swiper
-      modules={[Pagination, Scrollbar]}
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      loop={true}
+      // modules={[Pagination, Scrollbar]}
+      // pagination={{ clickable: true }}
+      // scrollbar={{ draggable: true }}
+      // loop={true}
       slidesPerView={1}
+      allowSlideNext={false}
+      allowSlidePrev={false}
       spaceBetween={30}
       className="mySwiper max-w-sm w-full sm:max-w-md md:max-w-lg lg:max-w-2xl"
     >
