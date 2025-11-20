@@ -39,7 +39,7 @@ const items: FAQItemType[] = [
   {
     question: "How do I get started?",
     answer:
-      "Simply click the button “Book Demo” for free access and we’ll send you your unique code snippet. You can install the widget immediately and start showing accurate broadband data on your listings within minutes.",
+      "Simply click the button “Start Free” for free access and we’ll send you your unique code snippet. You can install the widget immediately and start showing accurate broadband data on your listings within minutes.",
   },
 ];
 
