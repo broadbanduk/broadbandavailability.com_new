@@ -15,8 +15,7 @@ export default function Hero() {
           </h1>
           <div className="space-y-4">
             <p className="text-xl text-corporate-black">
-              Show homemovers accurate broadband availability for every UK
-              address
+              Showcase accurate broadband availability for 30+ million UK addresses
             </p>
           </div>
           <div className="space-y-2 flex-col items-center hidden lg:flex justify-start">
