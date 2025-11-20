@@ -17,9 +17,52 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_DOMAIN || "https://broadbandavailability.com"
+  ),
   title: "Broadband Availability",
   description:
     "Broadband Availability - The UK's Most Trusted Source of Broadband Availability Data",
+  keywords: [
+    "broadband availability",
+    "UK broadband",
+    "internet availability",
+    "broadband data",
+    "estate agents",
+    "property broadband",
+  ],
+  authors: [{ name: "Broadband Availability" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: process.env.NEXT_PUBLIC_DOMAIN || "https://broadbandavailability.com",
+    siteName: "Broadband Availability",
+    title: "Broadband Availability",
+    description:
+      "Broadband Availability - The UK's Most Trusted Source of Broadband Availability Data",
+    images: [
+      {
+        url: "/broadband_share.png",
+        width: 1200,
+        height: 630,
+        alt: "Broadband Availability",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Broadband Availability",
+    description:
+      "Broadband Availability - The UK's Most Trusted Source of Broadband Availability Data",
+    images: ["/broadband_share.png"],
+  },
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_DOMAIN || "https://broadbandavailability.com",
+  },
 };
 
 export default function RootLayout({
