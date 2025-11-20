@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="bg-light-gray-bg py-16 px-5 xl:px-0 lg:py-[120px]"
+      className="bg-light-gray-bg py-16 px-5 lg:py-[120px]"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] container gap-10 lg:gap-16 items-center mx-auto">
         <div className="space-y-8 lg:space-y-16 max-w-md">
