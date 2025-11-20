@@ -6,9 +6,9 @@ const nextConfig: NextConfig = {
   // ...(process.env.FORGE_DEPLOY !== "true" && {
   //   basePath: "/broadbandavailability.com_new",
   // }),
-  // output: "export",
-  // reactStrictMode: true,
-  // basePath: "/broadbandavailability.com_new",
+  output: "export",
+  reactStrictMode: true,
+  basePath: "/broadbandavailability.com_new",
 };
 
 export default nextConfig;
